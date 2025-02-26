@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ.api</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/style/frame.css">
+    <link rel="stylesheet" href="assets/style/pattern.css">
+    <link rel="stylesheet" href="assets/style/grid.css">
+    <link rel="stylesheet" href="assets/style/card.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+
+    <header class="position-sticky top-0 start-0 end-0 glass py-3">
+        <div class="container d-flex-bc">
+            <p class="mitr-bold" id="animated-text"></p>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle-icon">🌓</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="grid text-center">
+            <a href="./html/grid.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 border-warning p-3"><p>grid</p></div>
+            </a>
+            <a href="./html/accordion.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>accordion</p></div>
+            </a>
+            <a href="./html/notification.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>notification</p></div>
+            </a>
+            <a href="./html/badge.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>badge</p></div>
+            </a>
+            <a href="./html/breadcrumb.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>breadcrumb</p></div>
+            </a>
+            <a href="./html/button.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>button</p></div>
+            </a>
+            <a href="./html/card.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>card</p></div>
+            </a>
+            <a href="./html/carousel.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>carousel</p></div>
+            </a>
+            <a href="./html/collapse.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>collapse</p></div>
+            </a>
+            <a href="./html/dropdown.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>dropdown</p></div>
+            </a>
+            <a href="./html/drivers.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>drivers</p></div>
+            </a>
+            <a href="./html/modal.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>modal</p></div>
+            </a>
+            <a href="./html/navbar.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>navbar</p></div>
+            </a>
+            <a href="./html/offcanvas.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>offcanvas</p></div>
+            </a>
+            <a href="./html/pagination.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>pagination</p></div>
+            </a>
+            <a href="./html/progress.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>progress</p></div>
+            </a>
+            <a href="./html/placeholder.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>placeholder</p></div>
+            </a>
+            <a href="./html/scrollspy.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>scrollspy</p></div>
+            </a>
+            <a href="./html/spinner.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>spinner</p></div>
+            </a>
+            <a href="./html/table.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>table</p></div>
+            </a>
+            
+            <a href="./html/image.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>image</p></div>
+            </a>
+            <a href="./html/video.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>video</p></div>
+            </a>
+            <a href="./html/chart.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>chart</p></div>
+            </a>
+            <a href="./html/calendar.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>calendar</p></div>
+            </a>
+            <a href="./html/editor.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>editor</p></div>
+            </a>
+            <a href="./html/code.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>code</p></div>
+            </a>
+            <a href="./html/slider.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>slider</p></div>
+            </a>
+            <a href="./html/file.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>file</p></div>
+            </a>
+            <a href="./html/range.html" class="col-6 col-xs-3 col-md-2">
+                <div class="h-100 rounded-10 border-2 p-3"><p>range</p></div>
+            </a>
+            <a href="./html/audioVideo.html" class="col-6 col-xs-3 col-md-3">
+                <div class="h-100 rounded-10 border-2 p-3"><p>audio \ video</p></div>
+            </a>
+            <a href="./html/date.html" class="col-6 col-xs-3 col-md-3">
+                <div class="h-100 rounded-10 border-2 p-3"><p>Date | Time | Color</p></div>
+            </a>
+            <a href="./html/popover.html" class="col-6 col-xs-3 col-md-3">
+                <div class="h-100 rounded-10 border-2 p-3"><p>popover | tooltip</p></div>
+            </a>
+            <a href="./html/form.html" class="col-6 col-xs-3 col-md-3">
+                <div class="h-100 rounded-10 border-2 p-3"><p>form | input</p></div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    <script src="assets/js/frame.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+:root {
+    --bg-color: #FFFFFF;
+    --bg-rgb-color: 255, 255, 255;
+    --bg-secondary-color: #F3F4F6;
+    --bg-border-color: #D1D5DC;
+    
+    --text-color: #101828;
+    --text-color-white: #CCCCCC;
+    --text-color-black: #101828;
+    --text-muted: #63748E;
+    --link-color: #0d6efd;
+    --link-hover-color: #0a58ca;
+
+    --bg-primary-color: #007bff;
+    --bg-secondary-color: #6c757d;
+    --bg-success-color: #28a745;
+    --bg-danger-color: #dc3545;
+    --bg-warning-color: #ffc107;
+    --bg-info-color: #17a2b8;
+    --bg-light-color: #f8f9fa;
+    --bg-dark-color: #343a40;
+
+    --space-1: 0.25rem;  /* 4.25px */
+    --space-2: 0.5rem;   /* 8.5px */
+    --space-3: 1rem;     /* 17px */
+    --space-4: 1.5rem;   /* 25.5px */
+    --space-5: 3rem;     /* 51px */
+    --columns: 12;
+    --gap: 12px;
+
+    /* Line heights */
+    --line-height-sm: 1.2;
+    --line-height-base: 1.5;
+    --line-height-lg: 1.8;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #0F1014;
+    --bg-rgb-color: 15, 16, 20;
+    --bg-secondary-color: #17181D;
+    --bg-border-color: #25262E;
+    
+    --text-color: #CCCCCC;
+    --text-color-white: #CCCCCC;
+    --text-color-black: #101828;
+    --text-muted: #777777;
+    --link-color: #0d6efd;
+    --link-hover-color: #0a58ca;
+
+    --bg-primary-color: #007bff;
+    --bg-secondary-color: #6c757d;
+    --bg-success-color: #28a745;
+    --bg-danger-color: #dc3545;
+    --bg-warning-color: #ffc107;
+    --bg-info-color: #17a2b8;
+    --bg-light-color: #f8f9fa;
+    --bg-dark-color: #343a40;
+}
+
+
+/* Стили для кнопки переключения темы */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #212529;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 9999;
+}
+.theme-toggle:hover { background-color: #1a1e22; }
+.theme-toggle-icon { font-size: 1.5rem; }
+
+/* Стили для заголовка XYZ.api */
+.mitr-bold {
+    font-family: "Mitr", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Стили для основного контента */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s;
+}
+
+.glass{
+    background-color: rgba(var(--bg-rgb-color), 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--bg-rgb-color), 0.1);
+}
+
+/* Selection styles */
+::selection {
+    background-color: #49e2c1;
+    color: var(--text-color-black);
+}
