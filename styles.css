@@ -18,14 +18,29 @@
     --link-color: #0d6efd;
     --link-hover-color: #0a58ca;
 
-    --bg-primary-color: #007bff;
+    --bg-primary-color: #0d6efd;
+    --bg-primary-color-moon: #0d6efd;
+
     --bg-secondary-color: #6c757d;
-    --bg-success-color: #28a745;
+    --bg-secondary-color-moon: #6c757d;
+
+    --bg-success-color: #198754;
+    --bg-success-color-moon: #198754;
+
     --bg-danger-color: #dc3545;
+    --bg-danger-color-moon: #dc3545;
+
     --bg-warning-color: #ffc107;
-    --bg-info-color: #17a2b8;
-    --bg-light-color: #f8f9fa;
-    --bg-dark-color: #343a40;
+    --bg-warning-color-moon: #ffc107;
+    
+    --bg-info-color: #0dcaf0;
+    --bg-info-color-moon: #0dcaf0;
+
+    --bg-light-color: #ccc;
+    --bg-light-color-moon: #ccc;
+
+    --bg-dark-color: #212529;
+    --bg-dark-color-moon: #212529;
 
     --space-1: 0.25rem;  /* 4.25px */
     --space-2: 0.5rem;   /* 8.5px */
@@ -34,6 +49,12 @@
     --space-5: 3rem;     /* 51px */
     --columns: 12;
     --gap: 12px;
+
+    --btn-padding-y: 0.375rem;
+    --btn-padding-x: 0.75rem;
+    --btn-font-size: 1rem;
+    --btn-border-radius: 0.4rem;
+    --btn-transition: all 0.15s ease-in-out;
 
     /* Line heights */
     --line-height-sm: 1.2;
@@ -48,20 +69,35 @@
     --bg-border-color: #25262E;
     
     --text-color: #CCCCCC;
-    --text-color-white: #CCCCCC;
+    --text-color-white: #e2e2e2;
     --text-color-black: #101828;
     --text-muted: #777777;
     --link-color: #0d6efd;
     --link-hover-color: #0a58ca;
 
-    --bg-primary-color: #007bff;
+    --bg-primary-color: #0d6efd;
+    --bg-primary-color-moon: #0d6efd;
+
     --bg-secondary-color: #6c757d;
-    --bg-success-color: #28a745;
+    --bg-secondary-color-moon: #6c757d;
+
+    --bg-success-color: #198754;
+    --bg-success-color-moon: #198754;
+
     --bg-danger-color: #dc3545;
+    --bg-danger-color-moon: #dc3545;
+
     --bg-warning-color: #ffc107;
-    --bg-info-color: #17a2b8;
+    --bg-warning-color-moon: #ffc107;
+    
+    --bg-info-color: #0dcaf0;
+    --bg-info-color-moon: #0dcaf0;
+
     --bg-light-color: #f8f9fa;
-    --bg-dark-color: #343a40;
+    --bg-light-color-moon: #f8f9fa;
+
+    --bg-dark-color: #212529;
+    --bg-dark-color-moon: #212529;
 }
 
 
