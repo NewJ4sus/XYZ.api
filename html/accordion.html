@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ.api</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/style/frame.css">
+    <link rel="stylesheet" href="../assets/style/pattern.css">
+    <link rel="stylesheet" href="../assets/style/grid.css">
+    <link rel="stylesheet" href="../assets/style/accordion.css">
+    <link rel="stylesheet" href="../assets/style/card.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../prism/prism.css">
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+
+    <header class="position-sticky top-0 start-0 end-0 glass py-3">
+        <div class="container d-flex-bc">
+            <a href="../index.html" class="mitr-bold">XYZ.api</a>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle-icon">🌓</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="form-group grid">
+            <label class="checkbox-label col-4">
+                <input type="checkbox" class="checkbox-input accordion-control" data-class="accordion-border">
+                <span class="checkbox-custom"></span>
+                Border
+            </label>
+            <label class="checkbox-label col-4">
+                <input type="checkbox" class="checkbox-input accordion-control" data-class="accordion-round">
+                <span class="checkbox-custom"></span>
+                Round
+            </label>
+            <label class="checkbox-label col-4">
+                <input type="checkbox" class="checkbox-input accordion-control" data-class="accordion-round-item">
+                <span class="checkbox-custom"></span>
+                Round Item
+            </label>
+            <label class="checkbox-label col-4">
+                <input type="checkbox" class="checkbox-input accordion-control" data-attribute="data-bs-show" data-value="all">
+                <span class="checkbox-custom"></span>
+                Show All
+            </label>
+
+            <label class="radio-label col-4">
+                <input type="radio" name="color" class="radio-input accordion-control" data-class="accordion-color-blue">
+                <span class="radio-custom"></span>
+                Blue
+            </label>
+            <label class="radio-label col-4">
+                <input type="radio" name="color" class="radio-input accordion-control" data-class="accordion-color-red">
+                <span class="radio-custom"></span>
+                Red
+            </label>
+            <label class="radio-label col-4">
+                <input type="radio" name="color" class="radio-input accordion-control" data-class="accordion-color-green">
+                <span class="radio-custom"></span>
+                Green
+            </label>
+            <label class="radio-label col-4">
+                <input type="radio" name="color" class="radio-input accordion-control" data-class="accordion-default" checked>
+                <span class="radio-custom"></span>
+                Default
+            </label>
+        </div>
+
+        <div id="frame" class="my-5">
+            <div class="main-block">
+                <div class="accordion accordion-default">
+                    <div class="accordion-item">
+                        <button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                            Accordion 1
+                        </button>
+                        <div id="collapse1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                            Accordion 2
+                        </button>
+                        <div id="collapse2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                            Accordion 3
+                        </button>
+                        <div id="collapse3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block">
+<pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="accordion accordion-default"&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"&gt;
+            Accordion 1
+        &lt;/button&gt;
+        &lt;div id="collapse1" class="accordion-collapse collapse"&gt;
+            &lt;div class="accordion-body"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"&gt;
+            Accordion 2
+        &lt;/button&gt;
+        &lt;div id="collapse2" class="accordion-collapse collapse"&gt;
+            &lt;div class="accordion-body"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion-item"&gt;
+        &lt;button class="accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            Accordion 3
+        &lt;/button&gt;
+        &lt;div id="collapse3" class="accordion-collapse collapse"&gt;
+            &lt;div class="accordion-body"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam deserunt tempore laborum quae hic eligendi, quia laboriosam velit rerum architecto!
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordion = document.querySelector('.accordion');
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+            const controls = document.querySelectorAll('.accordion-control');
+
+            // Обработчик изменения контролов
+            controls.forEach(control => {
+                control.addEventListener('change', function() {
+                    if (this.dataset.class) {
+                        // Обработка классов
+                        if (this.type === 'radio') {
+                            // Удаляем все цветовые классы перед добавлением нового
+                            accordion.classList.remove('accordion-color-blue', 'accordion-color-red', 'accordion-color-green');
+                            if (this.checked && this.dataset.class) {
+                                accordion.classList.add(this.dataset.class);
+                            }
+                        } else {
+                            // Обычные классы (border, round, round-item)
+                            accordion.classList.toggle(this.dataset.class, this.checked);
+                        }
+                    } else if (this.dataset.attribute) {
+                        // Обработка атрибута Show All
+                        accordionBtns.forEach(btn => {
+                            if (this.checked) {
+                                btn.setAttribute(this.dataset.attribute, this.dataset.value);
+                            } else {
+                                btn.removeAttribute(this.dataset.attribute);
+                            }
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
+    <script src="../prism/prism.js"></script>
+    <script src="../assets/accordion.js"></script>
+    <script src="../scripts.js"></script>
+    <script src="../assets/js/frame.js"></script>
+</body>
+</html>
