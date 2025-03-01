@@ -93,6 +93,15 @@
 .bg-light { background-color: var(--bg-light-color); }
 .bg-dark { background-color: var(--bg-dark-color); }
 
+.box-shadow-primary { box-shadow: var(--box-shadow-primary); }
+.box-shadow-secondary { box-shadow: var(--box-shadow-secondary); }
+.box-shadow-success { box-shadow: var(--box-shadow-success); }
+.box-shadow-danger { box-shadow: var(--box-shadow-danger); }
+.box-shadow-warning { box-shadow: var(--box-shadow-warning); }
+.box-shadow-info { box-shadow: var(--box-shadow-info); }
+.box-shadow-light { box-shadow: var(--box-shadow-light); }
+.box-shadow-dark { box-shadow: var(--box-shadow-dark); }
+
 .bg-neon-pink { background-color: var(--bg-neon-pink-color); }
 .bg-neon-blue { background-color: var(--bg-neon-blue-color); }
 .bg-neon-green { background-color: var(--bg-neon-green-color); }
@@ -266,6 +275,8 @@
 .py-4 { padding-top: var(--space-4) !important; padding-bottom: var(--space-4) !important; }
 .py-5 { padding-top: var(--space-5) !important; padding-bottom: var(--space-5) !important; }
 
+.text-light{ color: var(--text-color-white); }
+.text-dark{ color: var(--text-color-dark); }
 
 .text-center{ text-align: center; }
 .text-end{ text-align: end; }

@@ -12,7 +12,7 @@
     
     --text-color: #101828;
     --text-color-white: #CCCCCC;
-    --text-color-black: #101828;
+    --text-color-dark: #101828;
     --text-muted: #63748E;
     --link-color: #0d6efd;
     --link-hover-color: #0a58ca;
@@ -67,36 +67,30 @@
     --bg-secondary-color: #17181D;
     --bg-border-color: #25262E;
     
-    --text-color: #CCCCCC;
-    --text-color-white: #e2e2e2;
-    --text-color-black: #101828;
+    --text-color: #f0efef;
+    --text-color-white: #f0efef;
+    --text-color-dark: #101828;
     --text-muted: #777777;
-    --link-color: #0d6efd;
+    --link-color: #4C49E2;
     --link-hover-color: #0a58ca;
 
-    --bg-primary-color: #0d6efd;
-    --bg-primary-color-moon: #0d6efd;
-
+    --bg-primary-color: #4C49E2;
     --bg-secondary-color: #6c757d;
-    --bg-secondary-color-moon: #6c757d;
-
     --bg-success-color: #198754;
-    --bg-success-color-moon: #198754;
-
-    --bg-danger-color: #dc3545;
-    --bg-danger-color-moon: #dc3545;
-
+    --bg-danger-color: #E24949;
     --bg-warning-color: #ffc107;
-    --bg-warning-color-moon: #ffc107;
-    
-    --bg-info-color: #0dcaf0;
-    --bg-info-color-moon: #0dcaf0;
+    --bg-info-color: #49D9E2;
+    --bg-light-color: #EEFFFB;
+    --bg-dark-color: #17181D;
 
-    --bg-light-color: #f8f9fa;
-    --bg-light-color-moon: #f8f9fa;
-
-    --bg-dark-color: #212529;
-    --bg-dark-color-moon: #212529;
+    --box-shadow-primary: 0px 0px 20px 0px rgba(76, 73, 226, 0.5);
+    --box-shadow-secondary: 0px 0px 20px 0px rgba(108, 117, 125, 0.5);
+    --box-shadow-success: 0px 0px 20px 0px rgba(25, 135, 84, 0.5);
+    --box-shadow-danger: 0px 0px 20px 0px rgba(226, 73, 73, 0.5);
+    --box-shadow-warning: 0px 0px 20px 0px rgba(255, 193, 7, 0.5);
+    --box-shadow-info: 0px 0px 20px 0px rgba(73, 217, 226, 0.5);
+    --box-shadow-light: 0px 0px 20px 0px rgba(238, 255, 251, 0.5);
+    --box-shadow-dark: 0px 0px 20px 0px rgba(23, 24, 29, 0.5);
 
 
     /* NEON COLORS */
@@ -106,11 +100,11 @@
     --bg-neon-yellow-color: #FFFF00;
     --bg-neon-red-color: #FF0000;
 
-    --box-shadow-neon-pink: 0px 0px 20px 0px #D8045280;
-    --box-shadow-neon-blue: 0px 0px 20px 0px #0000FF80;
-    --box-shadow-neon-green: 0px 0px 20px 0px #00FF0080;
-    --box-shadow-neon-yellow: 0px 0px 20px 0px #FFFF0080;
-    --box-shadow-neon-red: 0px 0px 20px 0px #FF000080;
+    --box-shadow-neon-pink: 0px 0px 20px 0px rgba(216, 4, 82, 0.5);
+    --box-shadow-neon-blue: 0px 0px 20px 0px rgba(0, 0, 255, 0.5);
+    --box-shadow-neon-green: 0px 0px 20px 0px rgba(0, 255, 0, 0.5);
+    --box-shadow-neon-yellow: 0px 0px 20px 0px rgba(255, 255, 0, 0.5);
+    --box-shadow-neon-red: 0px 0px 20px 0px rgba(255, 0, 0, 0.5);
     
 }
 

@@ -22,49 +22,18 @@
     width: 100%;
 }
 
-.btn.warning, .btn.info, .btn.light {
-    color: var(--text-color-black);
-}
-
 /* Button variants */
-.btn.primary {
-    background-color: var(--bg-primary-color);
-    border-color: var(--bg-primary-color-moon);
-}
+.btn.primary { background-color: var(--bg-primary-color);}
+.btn.secondary { background-color: var(--bg-secondary-color);}
+.btn.success { background-color: var(--bg-success-color);}
+.btn.danger { background-color: var(--bg-danger-color);}
+.btn.warning { background-color: var(--bg-warning-color);}
+.btn.info { background-color: var(--bg-info-color);}
+.btn.light { background-color: var(--bg-light-color);}
+.btn.dark { background-color: var(--bg-dark-color);}
 
-.btn.secondary {
-    background-color: var(--bg-secondary-color);
-    border-color: var(--bg-secondary-color-moon);
-}
-
-.btn.success {
-    background-color: var(--bg-success-color);
-    border-color: var(--bg-success-color-moon);
-}
-
-.btn.danger {
-    background-color: var(--bg-danger-color);
-    border-color: var(--bg-danger-color-moon);
-}
-
-.btn.warning {
-    background-color: var(--bg-warning-color);
-    border-color: var(--bg-warning-color-moon);
-}
-
-.btn.info {
-    background-color: var(--bg-info-color);
-    border-color: var(--bg-info-color-moon);
-}
-
-.btn.light {
-    background-color: var(--bg-light-color);
-    border-color: var(--bg-light-color-moon);
-}
-
-.btn.dark {
-    background-color: var(--bg-dark-color);
-    border-color: var(--bg-dark-color-moon);
+.btn.warning, .btn.info, .btn.light {
+    color: var(--text-color-dark);
 }
 
 /* Disabled state */
