@@ -1,0 +1,23 @@
+.badge {
+    display: inline-block;
+    font-size: 0.70em;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    min-width: 14px;
+    min-height: 14px;
+    z-index: 9999;
+    background-color: var(--bg-secondary-color);
+    padding: 0;
+}
+
+
+.badge:not(:empty) {
+    min-width: 20px;
+    min-height: 20px;
+    padding: 5px 10px;
+}

@@ -84,7 +84,6 @@
 .border-left-right-2{ border-left: 0.2rem solid var(--bg-border-color); border-right: 0.2rem solid var(--bg-border-color); }
 .border-left-right-3{ border-left: 0.3rem solid var(--bg-border-color); border-right: 0.3rem solid var(--bg-border-color); }
 
-
 .bg-primary { background-color: var(--bg-primary-color); }
 .bg-secondary { background-color: var(--bg-secondary-color); }
 .bg-success { background-color: var(--bg-success-color); }
@@ -93,6 +92,18 @@
 .bg-info { background-color: var(--bg-info-color); }
 .bg-light { background-color: var(--bg-light-color); }
 .bg-dark { background-color: var(--bg-dark-color); }
+
+.bg-neon-pink { background-color: var(--bg-neon-pink-color); }
+.bg-neon-blue { background-color: var(--bg-neon-blue-color); }
+.bg-neon-green { background-color: var(--bg-neon-green-color); }
+.bg-neon-yellow { background-color: var(--bg-neon-yellow-color); }
+.bg-neon-red { background-color: var(--bg-neon-red-color); }
+
+.box-shadow-neon-pink { box-shadow: var(--box-shadow-neon-pink); }
+.box-shadow-neon-blue { box-shadow: var(--box-shadow-neon-blue); }
+.box-shadow-neon-green { box-shadow: var(--box-shadow-neon-green); }
+.box-shadow-neon-yellow { box-shadow: var(--box-shadow-neon-yellow); }
+.box-shadow-neon-red { box-shadow: var(--box-shadow-neon-red); }
 
 .border-primary { border-color: var(--bg-primary-color); }
 .border-secondary { border-color: var(--bg-secondary-color); }

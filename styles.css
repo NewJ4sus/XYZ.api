@@ -8,7 +8,6 @@
 :root {
     --bg-color: #FFFFFF;
     --bg-rgb-color: 255, 255, 255;
-    --bg-secondary-color: #F3F4F6;
     --bg-border-color: #D1D5DC;
     
     --text-color: #101828;
@@ -98,6 +97,21 @@
 
     --bg-dark-color: #212529;
     --bg-dark-color-moon: #212529;
+
+
+    /* NEON COLORS */
+    --bg-neon-pink-color: #D80452;
+    --bg-neon-blue-color: #0000FF;
+    --bg-neon-green-color: #00FF00;
+    --bg-neon-yellow-color: #FFFF00;
+    --bg-neon-red-color: #FF0000;
+
+    --box-shadow-neon-pink: 0px 0px 20px 0px #D8045280;
+    --box-shadow-neon-blue: 0px 0px 20px 0px #0000FF80;
+    --box-shadow-neon-green: 0px 0px 20px 0px #00FF0080;
+    --box-shadow-neon-yellow: 0px 0px 20px 0px #FFFF0080;
+    --box-shadow-neon-red: 0px 0px 20px 0px #FF000080;
+    
 }
 
 

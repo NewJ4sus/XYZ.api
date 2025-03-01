@@ -1,6 +1,9 @@
 /* Base button styles */
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: var(--btn-padding-y) var(--btn-padding-x);
     font-size: var(--btn-font-size);
     font-weight: 400;
