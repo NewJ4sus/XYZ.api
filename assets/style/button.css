@@ -107,7 +107,7 @@
 .btn.outline.secondary:hover { background-color: var(--bg-secondary-color); color: var(--text-color-white); }
 .btn.outline.success:hover { background-color: var(--bg-success-color); color: var(--text-color-white); }
 .btn.outline.danger:hover { background-color: var(--bg-danger-color); color: var(--text-color-white); }
-.btn.outline.warning:hover { background-color: var(--bg-warning-color); color: var(--text-color-black); }
-.btn.outline.info:hover { background-color: var(--bg-info-color); color: var(--text-color-black); }
-.btn.outline.light:hover { background-color: var(--bg-light-color); color: var(--text-color-black); }
+.btn.outline.warning:hover { background-color: var(--bg-warning-color); color: var(--text-color-dark); }
+.btn.outline.info:hover { background-color: var(--bg-info-color); color: var(--text-color-dark); }
+.btn.outline.light:hover { background-color: var(--bg-light-color); color: var(--text-color-dark); }
 .btn.outline.dark:hover { background-color: var(--bg-dark-color); color: var(--text-color-white); }
