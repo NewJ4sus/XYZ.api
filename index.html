@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/style/pattern.css">
     <link rel="stylesheet" href="assets/style/grid.css">
     <link rel="stylesheet" href="assets/style/card.css">
-
+    <link rel="stylesheet" href="assets/style/search-bar.css">
     <link rel="icon" type="image/png" href="./logo.png">
 
 
@@ -40,8 +40,19 @@
     </header>
 
     <main class="container my-5">
+        <div class="search-bar-screen">
+            <div class="search-bar-screen-header">
+                <input type="text" placeholder="Search...">
+                <button type="button" class="btn-close-search-bar" id="closeSearchBar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
         <div class="grid text-center">
-            <a href="#" class="col-6 col-xs-3 col-md-2">
+            <a href="./html/grid.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 border-danger p-3"><p>grid</p></div>
             </a>
             <a href="./html/accordion.html" class="col-6 col-xs-3 col-md-2">
@@ -75,13 +86,13 @@
                 <div class="h-100 rounded-10 border-2 p-3"><p>dropdown</p></div>
             </a>
             <a href="./html/drivers.html" class="col-6 col-xs-3 col-md-2">
-                <div class="h-100 rounded-10 border-2 p-3"><p>drivers</p></div>
+                <div class="h-100 rounded-10 border-2 border-warning p-3"><p>drivers</p></div>
             </a>
             <a href="./html/modal.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 p-3"><p>modal</p></div>
             </a>
             <a href="./html/navbar.html" class="col-6 col-xs-3 col-md-2">
-                <div class="h-100 rounded-10 border-2 p-3"><p>navbar</p></div>
+                <div class="h-100 rounded-10 border-2 border-danger p-3"><p>navbar</p></div>
             </a>
             <a href="./html/offcanvas.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 p-3"><p>offcanvas</p></div>
@@ -90,7 +101,7 @@
                 <div class="h-100 rounded-10 border-2 p-3"><p>pagination</p></div>
             </a>
             <a href="./html/progress.html" class="col-6 col-xs-3 col-md-2">
-                <div class="h-100 rounded-10 border-2 p-3"><p>progress</p></div>
+                <div class="h-100 rounded-10 border-2 border-warning p-3"><p>progress</p></div>
             </a>
             <a href="./html/placeholder.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 p-3"><p>placeholder</p></div>
@@ -99,7 +110,7 @@
                 <div class="h-100 rounded-10 border-2 p-3"><p>scrollspy</p></div>
             </a>
             <a href="./html/spinner.html" class="col-6 col-xs-3 col-md-2">
-                <div class="h-100 rounded-10 border-2 p-3"><p>spinner</p></div>
+                <div class="h-100 rounded-10 border-2 border-warning p-3"><p>spinner</p></div>
             </a>
             <a href="./html/table.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 border-warning p-3"><p>table</p></div>
@@ -148,7 +159,9 @@
     </main>
 
     <!-- Scripts -->
+    <script src="assets/js/search-bar.js"></script>
     <script src="scripts.js"></script>
     <script src="assets/js/frame.js"></script>
 </body>
 </html>
+

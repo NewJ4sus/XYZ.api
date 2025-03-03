@@ -64,7 +64,6 @@
 :root[data-theme="dark"] {
     --bg-color: #0F1014;
     --bg-rgb-color: 15, 16, 20;
-    --bg-secondary-color: #17181D;
     --bg-border-color: #25262E;
     
     --text-color: #f0efef;
@@ -75,7 +74,7 @@
     --link-hover-color: #0a58ca;
 
     --bg-primary-color: #4C49E2;
-    --bg-secondary-color: #6c757d;
+    --bg-secondary-color: #17181D;
     --bg-success-color: #198754;
     --bg-danger-color: #E24949;
     --bg-warning-color: #ffc107;
@@ -119,7 +118,6 @@
     color: #FFF;
     cursor: pointer;
     transition: background-color 0.3s;
-    z-index: 9999;
 }
 .theme-toggle:hover { background-color: #1a1e22; }
 .theme-toggle-icon { font-size: 1.5rem; }
