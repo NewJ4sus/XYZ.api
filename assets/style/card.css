@@ -58,8 +58,8 @@
 
 .group-btn-card button{
     border-radius: 10px;
-    background-color: var(--card-bg);
-    box-shadow: 5px 5px 10px var(--card-shadow);
+    background-color: var(--bg-secondary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border: none;
     outline: none;
     height: 40px;
@@ -103,7 +103,7 @@
 
 }
 
-@media (max-width: 480px) {
+@container (max-width: 480px) {
     .space-between {
         flex-direction: column;
         align-items: flex-start;
@@ -146,4 +146,23 @@
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+}
+
+.net-grid {
+    border: 1px dashed var(--text-muted);
+    background-image: linear-gradient(var(--text-muted) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--text-muted) 1px, transparent 1px);
+    background-size: 15px 15px;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px;
+    margin: 0;
 }

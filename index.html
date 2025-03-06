@@ -31,13 +31,23 @@
 
     <header class="position-sticky top-0 start-0 end-0 glass py-3">
         <div class="container d-flex-bc">
-            <img src="./logo.png" alt="logo" width="40" height="40">
-            <p class="mitr-bold" id="animated-text"></p>
-            <button id="theme-toggle" class="theme-toggle">
-                <span class="theme-toggle-icon">🌓</span>
-            </button>
+            <div class="d-flex align-center gap-3">
+                <img src="./media/logo.svg" alt="logo" width="40" height="40">
+                <span class="mitr-bold" id="animated-text"></span>
+            </div>
+            
+            <div class="d-flex align-center gap-3">
+                <small><kbd>Ctrl</kbd> + <kbd>K</kbd></small>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </div>
         </div>
     </header>
+
+    <button id="theme-toggle" class="theme-toggle position-fixed bottom-0 end-0 m-3">
+        <span class="theme-toggle-icon">🌓</span>
+    </button>
 
     <main class="container my-5">
         <div class="search-bar-screen">
@@ -71,7 +81,7 @@
                 <div class="h-100 rounded-10 border-2 border-warning p-3"><p>button</p></div>
             </a>
             <a href="./html/card.html" class="col-6 col-xs-3 col-md-2">
-                <div class="h-100 rounded-10 border-2 p-3"><p>card</p></div>
+                <div class="h-100 rounded-10 border-2 border-warning p-3"><p>card</p></div>
             </a>
             <a href="./html/carousel.html" class="col-6 col-xs-3 col-md-2">
                 <div class="h-100 rounded-10 border-2 border-warning p-3"><p>carousel</p></div>
