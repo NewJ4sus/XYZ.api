@@ -3,7 +3,6 @@
     position: relative;
     margin: 1.5rem 0;
     width: 100%;
-    max-width: 400px;
 }
 
 /* Base input styles */
@@ -45,10 +44,10 @@
 .input-container select:focus ~ label:not(.input-select-label),
 .input-container input:not(:placeholder-shown) ~ label:not(.input-select-label),
 .input-container.label-top label:not(.input-select-label) {
-    top: -1rem;
+    top: -1.2rem;
     left: 0;
-    font-size: 0.85rem;
-    color: var(--primary-color);
+    font-size: 1rem;
+    color: #FFF;
     transform: translateY(0);
     background: var(--input-bg);
 }
@@ -167,8 +166,13 @@
     appearance: none;
     padding-right: 2.5rem;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    color: #FFF;
     background-repeat: no-repeat;
     background-position: right 1rem center;
+}
+
+.input-container select option{
+    background-color: var(--bg-color);
 }
 
 /* Disabled state */
