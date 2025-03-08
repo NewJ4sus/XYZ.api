@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ.api</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/style/frame.css">
+    <link rel="stylesheet" href="../assets/style/grid.css">
+    <link rel="stylesheet" href="../assets/style/badge.css">
+    <link rel="stylesheet" href="../assets/style/button.css">
+    <link rel="stylesheet" href="../assets/style/card.css">
+    <link rel="stylesheet" href="../assets/style/pattern.css">
+    <link rel="stylesheet" href="../assets/style/input.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
+    <style>
+        .grid-auto > * {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="position-sticky top-0 start-0 end-0 glass py-3 mb-5">
+        <div class="container d-flex-bc">
+            <a href="../index.html">
+                <img src="../logo.png" alt="logo" width="40" height="40">
+            </a>
+            <span class="mitr-bold">Input</span>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle-icon">🌓</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="grid-auto grid-2 gap-3">
+            <div>
+                <div class="input-container label-top">
+                    <input id="input-text" type="text" placeholder="text">
+                    <label class="label-top" for="input-text">text</label>
+                </div>
+
+                <div class="input-container label-top">
+                    <input id="input-email1" type="email" placeholder="email">
+                    <label for="input-email1">email</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-text" type="search" placeholder="">
+                    <label for="input-text">search</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-password" type="password" placeholder="">
+                    <label for="input-password">password</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-email" type="email" placeholder="">
+                    <label for="input-email">email</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-number" type="number" placeholder="">
+                    <label for="input-number">number</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-number1" type="number" placeholder="" min="1" max="20">
+                    <label for="input-number1">number</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-tel" type="tel" placeholder="">
+                    <label for="input-tel">tel</label>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-textarea" type="textarea" placeholder="">
+                    <label for="input-textarea">textarea</label>
+                </div>
+            </div>
+    
+            <div>
+                <div class="input-container">
+                    <input id="input-range" type="range" placeholder="" min="1" max="100">
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-date" type="date" placeholder="">
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-color" type="color" placeholder="">
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-time" type="time" placeholder="">
+                </div>
+        
+                <div class="input-container">
+                    <select id="input-select" placeholder="">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+        
+                <div class="input-container">
+                    <input id="input-file" type="file">
+                </div>
+        
+                <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
+                    <input id="input-checkbox0" type="checkbox" name="programming" value="HTML">
+                    <label class="input-select-label" for="input-checkbox0">HTML</label>
+        
+                    <input id="input-checkbox1" type="checkbox" name="programming" value="CSS">
+                    <label class="input-select-label" for="input-checkbox1">CSS</label>
+        
+                    <input id="input-checkbox2" type="checkbox" name="programming" value="JS">
+                    <label class="input-select-label" for="input-checkbox2">JS</label>
+        
+                    <input id="input-checkbox3" type="checkbox" name="programming" value="TS">
+                    <label class="input-select-label" for="input-checkbox3">TS</label>
+                </div>
+        
+                <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
+                    <input id="input-radio0" type="radio" name="programming" value="HTML">
+                    <label class="input-select-label" for="input-radio0">HTML</label>
+        
+                    <input id="input-radio1" type="radio" name="programming" value="CSS">
+                    <label class="input-select-label" for="input-radio1">CSS</label>
+        
+                    <input id="input-radio2" type="radio" name="programming" value="JS">
+                    <label class="input-select-label" for="input-radio2">JS</label>
+        
+                    <input id="input-radio3" type="radio" name="programming" value="TS">
+                    <label class="input-select-label" for="input-radio3">TS</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../scripts.js"></script>
+    <script src="../assets/js/frame.js"></script>
+</body>
+</html>
