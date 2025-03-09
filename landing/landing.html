@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ.api</title>
+
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="../styles.css"> -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/style/frame.css">
+    <link rel="stylesheet" href="../assets/style/pattern.css">
+    <link rel="stylesheet" href="../assets/style/grid.css">
+    <link rel="stylesheet" href="../assets/style/card.css">
+    <link rel="stylesheet" href="../assets/style/badge.css">
+    <link rel="stylesheet" href="../assets/style/input.css">
+    <link rel="stylesheet" href="../assets/style/button.css">
+    <link rel="stylesheet" href="./landing.css">
+    <link rel="stylesheet" href="../assets/style/search-bar.css">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="../media/logo.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body class="landing-container">
+    <aside class="aside-menu">
+        <div class="aside-header">
+            <img src="../media/logo.svg" alt="logo">
+            <p>XYZ.api</p>
+        </div>
+        <div class="aside-body">
+            <nav class="aside-nav">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Getting started</a>
+                        <ul class="submenu">
+                            <li><a href="#">Introduction</a></li>
+                            <li><a href="#">Quick start</a></li>
+                            <li><a href="#">Installation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Layout</a>
+                        <ul class="submenu">
+                            <li><a href="#">Grid system</a></li>
+                            <li><a href="#">Containers</a></li>
+                            <li><a href="#">Responsive</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Components
+                            <small class="badge rounded-10 ml-2">24</small>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../html/accordion.html">Accordions</a></li>
+                            <li><a href="#">Alerts</a></li>
+                            <li><a href="#">Badges</a></li>
+                            <li><a href="#">Breadcrumb</a></li>
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Button group</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Carousel</a></li>
+                            <li><a href="#">Close button</a></li>
+                            <li><a href="#">Collapse</a></li>
+                            <li><a href="#">Dropdowns</a></li>
+                            <li><a href="#">List group</a></li>
+                            <li><a href="#">Modals</a></li>
+                            <li><a href="#">Navbar</a></li>
+                            <li><a href="#">Navs & tabs</a></li>
+                            <li><a href="#">Offcanvas</a></li>
+                            <li><a href="#">Pagination</a></li>
+                            <li><a href="#">Placeholders</a></li>
+                            <li><a href="#">Popovers</a></li>
+                            <li><a href="#">Progress</a></li>
+                            <li><a href="#">Scrollspy</a></li>
+                            <li><a href="#">Spinners</a></li>
+                            <li><a href="#">Notification</a></li>
+                            <li><a href="#">Tooltips</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Navigation</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Forms</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Data</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Utilities</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Methods</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Design blocks</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Templates</a>
+                        <ul class="submenu">
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Modals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header class="d-flex-bc mb-4">
+            <div class="btn-menu-aside">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </div>
+            <h5>Getting started</h5>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle-icon">🌓</span>
+            </button>
+        </header>
+
+        
+    </main>
+
+    <script src="../assets/js/search-bar.js"></script>
+    <script src="../scripts.js"></script>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const navItem = button.closest('.nav-item');
+                navItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
