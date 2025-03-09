@@ -4,9 +4,23 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-landing-color: #FFFFFF;
+    --bg-landing-text-color: #27272a;
+    --bg-landing-border-color: #D1D5DC;
+    --bg-landing-color-hover: #D1D5DC;
+}
+
+:root[data-theme="dark"] {
+    --bg-landing-color: #060607;
+    --bg-landing-text-color: #e8ebf0;
+    --bg-landing-border-color: #27272a;
+    --bg-landing-color-hover: #0f1014;
+}
+
 body{
-    background-color: #060607;
-    color: #e8ebf0;
+    background-color: var(--bg-landing-color);
+    color: var(--bg-landing-text-color);
     font-family: 'Inter', sans-serif;
 }
 
@@ -59,7 +73,7 @@ body{
     justify-content: center;
     gap: 10px;
     padding: 20px 10px;
-    border-bottom: 1px solid #27272a;
+    border-bottom: 1px solid var(--bg-landing-border-color);
     background-color: inherit;
     position: sticky;
     top: 0;
@@ -102,12 +116,12 @@ body{
 }
 
 .aside-nav ul li:hover {
-    border: 1px solid #18181b;
+    border: 1px solid var(--bg-landing-border-color);
 }
 
 .aside-nav ul li a {
     text-decoration: none;
-    color: #777777;
+    color: var(--text-muted);
 }
 
 .nav-item {
@@ -121,7 +135,7 @@ body{
 }
 
 .nav-item.active {
-    border: 1px solid #18181b;
+    border: 1px solid var(--bg-landing-border-color);
 }
 
 .nav-item.active .nav-link::after {
@@ -142,7 +156,7 @@ body{
 }
 
 .nav-item > .nav-link {
-    color: #777777;
+    color: var(--text-muted);
     padding: 15px;
     display: flex;
     align-items: center;
@@ -153,7 +167,6 @@ body{
 
 .nav-item > .nav-link:hover {
     color: var(--text-color);
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 
@@ -162,13 +175,13 @@ body{
     padding: 15px;
     display: block;
     font-size: 0.9em;
-    color: #777777;
+    color: var(--text-muted);
     text-decoration: none;
 }
 
 .submenu a:hover {
     color: var(--text-color);
-    background-color: rgba(160, 150, 150, 0.05);
+    background-color: var(--bg-landing-color-hover);
 }
 
 /* Убираем нижний border у последнего элемента submenu */
@@ -198,7 +211,7 @@ body{
 
 
 .content {
-    background-color: #0f1014;
+    background-color: var(--bg-landing-color-hover);
     margin: 7px 7px 7px 0;
     margin-left: 250px; /* Отступ, равный ширине aside */
     flex-grow: 1;
@@ -206,7 +219,7 @@ body{
     overflow-y: auto; /* Прокрутка основного контента */
     height: 100%;
     border-radius: 15px;
-    border: 1px solid #27272a;
+    border: 1px solid var(--bg-landing-border-color);
 }
 
 .btn-menu-aside {
