@@ -169,6 +169,13 @@ body{
     color: var(--text-color);
 }
 
+.nav-link-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
 
 
 .submenu a {
