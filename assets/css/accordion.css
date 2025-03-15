@@ -16,7 +16,7 @@
     position: relative;
     cursor: pointer;
     border-radius: 0; /* Без скруглений по умолчанию */
-    background: #252525;
+    background: #242427;
     border: 1px solid transparent;
 }
 
@@ -40,12 +40,17 @@
 }
 
 .accordion-default .accordion-btn:hover {
-    background: #222;
+    background: #1b1b1f;
 }
 
 /* 🎨 Border */
 .accordion-border .accordion-btn {
-    border: 1px solid #ccc;
+    border: 1px solid #292a30;
+    /* border-bottom: none; */
+}
+
+.accordion-border .accordion-item:last-child .accordion-btn {
+    border-bottom: 1px solid #292a30;
 }
 
 /* 🟢 Скругление (только для кнопок) */
@@ -115,12 +120,30 @@
 
 /* 📜 Анимация содержимого */
 .accordion-collapse {
-    background-color: #444444;
+    background-color: #1b1b1f;
     color: #f8f9fa;
     overflow: hidden;
     height: 0;
     opacity: 0;
     transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+.accordion-border .accordion-collapse {
+    border-left: 1px solid #292a30;
+    border-right: 1px solid #292a30;
+    /* border-bottom: none; */
+}
+
+.accordion-border .accordion-item:last-child .accordion-collapse {
+    border-bottom: 1px solid #292a30;
+    /* border-bottom: none; */
+}
+
+.accordion-border.accordion-round-item .accordion-collapse {
+    border-left: 1px solid #292a30;
+    border-right: 1px solid #292a30;
+    border-bottom: 1px solid #292a30;
+    /* border-bottom: none; */
 }
 
 .accordion-collapse.show {

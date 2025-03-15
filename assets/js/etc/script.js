@@ -1,3 +1,16 @@
+// Для aside left menu
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-link').forEach(button => {
+        button.addEventListener('click', () => {
+            const navItem = button.closest('.aside-item');
+            if (navItem) {
+                navItem.classList.toggle('active');
+            }
+        });
+    });
+});
+
+
 // Анимация текста в заголовке
 const textElement = document.getElementById('animated-text');
 // Функция для добавления текста с задержкой

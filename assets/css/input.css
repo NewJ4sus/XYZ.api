@@ -47,7 +47,7 @@
     top: -1.2rem;
     left: 0;
     font-size: 1rem;
-    color: #FFF;
+    color: var(--text-secondary);
     transform: translateY(0);
     background: var(--input-bg);
 }
@@ -111,7 +111,7 @@
 
 /* Активное состояние (когда выбран checkbox или radio) */
 .input-container input:checked + .input-select-label::after {
-    background: #1743DF;
+    background: var(--primary-color-dark);
     box-shadow: 0 0 5px #1743DF25;
 }
 
@@ -137,13 +137,14 @@
 .input-container input[type="file"] {
     padding: 0.5rem;
     cursor: pointer;
+    border-color: var(--border-color);
 }
 
 .input-container input[type="file"]::file-selector-button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 6px;
-    background: var(--primary-color);
+    background: var(--bg-secondary-color);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -158,7 +159,23 @@
     height: 50px;
     padding: 0.3rem;
     cursor: pointer;
+    border-color: var(--border-color);
 }
+
+/* TIme input */
+.input-container input[type="time"] {
+    height: 50px;
+    cursor: pointer;
+    border-color: var(--border-color);
+}
+
+/* Date input */
+.input-container input[type="date"] {
+    height: 50px;
+    cursor: pointer;
+    border-color: var(--border-color);
+}
+
 
 /* Select styling */
 .input-container select {
