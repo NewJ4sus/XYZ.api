@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    position: sticky;
     width: 100%;
     min-height: 70px;
     padding: 10px;
@@ -26,12 +25,17 @@
 .aside-footer{ bottom: 0; border-top: 1px solid #292a30; }
 
 .aside-main{
-    height: 100%;
+    height: calc(100vh - 140px); /* вычитаем высоту шапки и футера (70px + 70px) */
     padding: 10px;
     overflow-y: auto;
     scrollbar-width: none;
 }
 .aside-main::-webkit-scrollbar { width: 0; }
+
+/* Если футер отсутствует */
+.no-footer .aside-main {
+    height: calc(100vh - 70px); /* Высота только с учётом шапки */
+}
 
 .landing-container{
     height: 100vh;
