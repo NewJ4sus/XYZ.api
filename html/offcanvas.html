@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/offcanvas.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -204,11 +205,151 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Offcanvas</h5>
-                
+
+                <!-- Basic Offcanvas example -->
+                <div class="mb-5">
+                    <h6 class="mb-3">Basic Offcanvas</h6>
+                    <button class="btn primary" data-offcanvas-target="basicOffcanvas">
+                        Toggle Offcanvas
+                    </button>
+
+                    <div class="offcanvas" id="basicOffcanvas" data-offcanvas-position="right">
+                        <div class="offcanvas-header">
+                            <h5>Offcanvas Title</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>This is some placeholder content for the offcanvas component.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Different positions -->
+                <div class="mb-5">
+                    <h6 class="mb-3">Offcanvas positions</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn primary" data-offcanvas-target="leftOffcanvas">
+                            Left
+                        </button>
+                        <button class="btn primary" data-offcanvas-target="rightOffcanvas">
+                            Right
+                        </button>
+                        <button class="btn primary" data-offcanvas-target="topOffcanvas">
+                            Top
+                        </button>
+                        <button class="btn primary" data-offcanvas-target="bottomOffcanvas">
+                            Bottom
+                        </button>
+                    </div>
+
+                    <!-- Offcanvas elements for each position -->
+                    <div class="offcanvas" id="leftOffcanvas" data-offcanvas-position="left" data-offcanvas-backdrop="true" data-offcanvas-scroll="false" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Left Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Left-positioned offcanvas content.</p>
+                        </div>
+                    </div>
+
+                    <div class="offcanvas" id="rightOffcanvas" data-offcanvas-position="right" data-offcanvas-backdrop="true" data-offcanvas-scroll="false" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Right Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Right-positioned offcanvas content.</p>
+                        </div>
+                    </div>
+
+                    <div class="offcanvas" id="topOffcanvas" data-offcanvas-position="top" data-offcanvas-backdrop="true" data-offcanvas-scroll="false" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Top Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Top-positioned offcanvas content.</p>
+                        </div>
+                    </div>
+
+                    <div class="offcanvas" id="bottomOffcanvas" data-offcanvas-position="bottom" data-offcanvas-backdrop="true" data-offcanvas-scroll="false" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Bottom Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Bottom-positioned offcanvas content.</p>
+                        </div>
+                    </div>
+
+                    <!-- Add similar offcanvas elements for right, top, and bottom positions -->
+                </div>
+
+                <div class="mb-5">
+                    <h6 class="mb-3">Без затемнения</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn primary" data-offcanvas-target="leftOffcanvas1">
+                            Open
+                        </button>
+                    </div>
+
+                    <!-- Offcanvas elements for each position -->
+                    <div class="offcanvas" id="leftOffcanvas1" data-offcanvas-position="left" data-offcanvas-backdrop="false" data-offcanvas-scroll="false" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Left Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Без затемнения фона</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h6 class="mb-3">Прокрутка страницы при открытии остается</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn primary" data-offcanvas-target="leftOffcanvas2">
+                            Open
+                        </button>
+                    </div>
+
+                    <!-- Offcanvas elements for each position -->
+                    <div class="offcanvas" id="leftOffcanvas2" data-offcanvas-position="left" data-offcanvas-backdrop="true" data-offcanvas-scroll="true" data-offcanvas-clickaway="true">
+                        <div class="offcanvas-header">
+                            <h5>Left Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Остается прокрутка при открытии</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h6 class="mb-3">Закрытие offcanvas только по кнопке</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn primary" data-offcanvas-target="leftOffcanvas3">
+                            Open
+                        </button>
+                    </div>
+
+                    <!-- Offcanvas elements for each position -->
+                    <div class="offcanvas" id="leftOffcanvas3" data-offcanvas-position="left" data-offcanvas-backdrop="true" data-offcanvas-scroll="false" data-offcanvas-clickaway="false">
+                        <div class="offcanvas-header">
+                            <h5>Left Offcanvas</h5>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Закрытие только по кнопке</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     
+    <script src="../assets/js/offcanvas.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>

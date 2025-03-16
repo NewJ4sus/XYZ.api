@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/notification.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -204,11 +205,109 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Notification</h5>
-                
+                <div class="form-container">
+                    <!-- Простой кастомный notification -->
+                    <div class="input-container grid">
+                        <input id="input-checkbox0" type="checkbox" name="position-notification" value="top">
+                        <label class="input-select-label" for="input-checkbox0">top</label>
+            
+                        <input id="input-checkbox1" type="checkbox" name="position-notification" value="bottom">
+                        <label class="input-select-label" for="input-checkbox1">bottom</label>
+            
+                        <input id="input-checkbox2" type="checkbox" name="position-notification" value="center">
+                        <label class="input-select-label" for="input-checkbox2">center</label>
+            
+                        <input id="input-checkbox3" type="checkbox" name="position-notification" value="left">
+                        <label class="input-select-label" for="input-checkbox3">left</label>
+
+                        <input id="input-checkbox3" type="checkbox" name="position-notification" value="right">
+                        <label class="input-select-label" for="input-checkbox3">right</label>
+                    </div>
+                    
+        
+                    <div class="grid-auto grid-4 my-4">
+                        <button class="btn primary" id="notifyBtn0">Показать custom</button>
+                    </div>
+
+                    <div class="grid-auto grid-4 my-4">
+                        <button class="btn primary" id="notifyBtn1">Показать simple</button>
+                        <button class="btn primary" id="notifyBtn2">Показать header-body</button>
+                        <button class="btn primary" id="notifyBtn3">Показать full</button>
+                    </div>
+        
+                    
+                </div>
             </div>
         </div>
     </main>
     
+
+    <script>
+        document.getElementById("notifyBtn0").addEventListener("click", function () {
+            // Получаем все чекбоксы
+            const checkboxes = document.querySelectorAll("input[name='position-notification']:checked");
+            
+            // Формируем строку позиции (например, "top left" или "bottom center")
+            let positions = Array.from(checkboxes).map(cb => cb.value).join(" ");
+            
+            // Если позиции не выбраны, ставим дефолтное "bottom right"
+            if (!positions) {
+                positions = "bottom right";
+            }
+
+            // Вызываем уведомление с выбранными позициями
+            showNotification({
+                title: "Custom Notification",
+                message: `Уведомление с кастомным положением: ${positions}`,
+                type: "notification-full",
+                position: positions,
+                timeout: 3000
+            });
+        });
+
+        document.getElementById("notifyBtn1").addEventListener("click", function () {
+            showNotification({
+                title: "Simple Notification",
+                type: "notification-simple",
+                position: "bottom right",
+                timeout: 3000
+            });
+        });
+
+        document.getElementById("notifyBtn2").addEventListener("click", function () {
+            showNotification({
+                title: "XYZ.api",
+                message: "Привет, это сообщение от xyz.api",
+                type: "notification-header-body",
+                position: "bottom right",
+                timeout: 3000,
+                srcImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIy0Tcy7duh8fB4ZxZLtO1Z9rr5QdEHNeCQ&s",
+            });
+        });
+
+        document.getElementById("notifyBtn3").addEventListener("click", function () {
+            showNotification({
+                title: "Full Notification",
+                message: "Это полное уведомление с заголовком, текстом и футером!",
+                type: "notification-full",
+                position: "bottom right",
+                timeout: 3000,
+                srcImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIy0Tcy7duh8fB4ZxZLtO1Z9rr5QdEHNeCQ&s",
+                footerButtons: [
+                    {
+                        label: "Написать",
+                        onClick: "alert('You clicked OK!')"
+                    },
+                    {
+                        label: "Отменить",
+                        onClick: "alert('You clicked Cancel!')"
+                    }
+                ]
+            });
+        });
+
+    </script>
+    <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>

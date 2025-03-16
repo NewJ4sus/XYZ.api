@@ -78,7 +78,7 @@
 /* Стили для группы кнопок */
 .group-btn-driver {
     display: flex;
-    gap: 0.5rem;
+    gap: 1px
 }
 
 .btn-driver, .btn-drivers {
@@ -100,13 +100,11 @@
 .group-btn-driver .btn-drivers:first-child {
     border-top-left-radius: var(--btn-border-radius);
     border-bottom-left-radius: var(--btn-border-radius);
-    box-shadow: -1px 0 0 0 var(--border-color);
 }
 
 .group-btn-driver .btn-drivers:last-child {
     border-top-right-radius: var(--btn-border-radius);
     border-bottom-right-radius: var(--btn-border-radius);
-    box-shadow: 1px 0 0 0 var(--border-color);
 }
 
 .btn-driver:hover, .btn-drivers:hover {

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/placeholder.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -203,12 +204,97 @@
     <main class="landing-container">
         <div class="landing-block">
             <div class="container mb-5">
-                <h5 class="mb-5">Placeholder</h5>
-                
+                <div class="d-flex-bc">
+                    <h5>Placeholder</h5>
+                    <button class="btn primary" style="max-width: 250px;">Загрузить страницу</button>
+                </div>
+                <div class="grid my-5">
+                    <div class="card col-12 col-xs-6">
+                        <div class="card-header">
+                            <div class="placeholder placeholder-pulse">
+                                <img src="https://masterpiecer-images.s3.yandex.net/600b2205436f8d5:upscaled" alt="Avatar" class="card-avatar-img">
+                            </div>
+                            <div class="card-avatar-title">
+                                <h5 class="placeholder placeholder-pulse">Chelsea Hagon</h5>
+                                <small class="text-muted placeholder placeholder-pulse">December 9 at 11:43 AM</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text placeholder placeholder-pulse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo impedit sapiente recusandae iusto officiis dolor? Laborum quibusdam quam, quidem vel assumenda repellat inventore sint nesciunt, ullam asperiores magnam placeat eveniet. Aliquam voluptatibus assumenda distinctio veniam quam tempora modi aperiam nemo voluptate reprehenderit quidem, nisi vero est.</p>
+                        </div>
+                    </div>
+        
+                    <div class="card col-12 col-xs-6">
+                        <div class="card-header space-between border-bottom-1">
+                            <div class="card-avatar-title">
+                                <h5 class="placeholder placeholder-wave">Chelsea Hagon</h5>
+                                <small class="text-muted placeholder placeholder-wave">December 9 at 11:43 AM</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text placeholder placeholder-wave">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo impedit sapiente recusandae iusto officiis dolor? Laborum quibusdam quam, quidem vel assumenda repellat inventore sint nesciunt, ullam asperiores magnam placeat eveniet. Aliquam voluptatibus assumenda distinctio veniam quam tempora modi aperiam nemo voluptate reprehenderit quidem, nisi vero est.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <h5>Анимации placeholder</h5>
+                <!-- Простой placeholder -->
+                <h1 class="mb-3 placeholder">Lorem ipsum dolor sit amet.</h1>
+                <!-- Анимированный placeholder -->
+                <h1 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h1>
+                <!-- Пульсирующий цветной placeholder -->
+                <h1 class="mb-3 placeholder placeholder-pulse">Lorem ipsum dolor sit amet.</h1>
+                <!-- Круглый placeholder со свечением -->
+                <h1 class="mb-3 placeholder placeholder-glow">Lorem ipsum dolor sit amet.</h1>
+
+
+                <h5>Размеры относительно элемента</h5>
+                <h1 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h1>
+                <h2 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h2>
+                <h3 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h3>
+                <h4 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h4>
+                <h5 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h5>
+                <h6 class="mb-3 placeholder placeholder-wave">Lorem ipsum dolor sit amet.</h6>
+
+
+                <div class="grid my-5">
+                    <button class="col-3 btn primary placeholder placeholder-wave">primary</button>
+                    <button class="col-3 btn secondary placeholder placeholder-wave">secondary</button>
+                    <button class="col-3 btn success placeholder placeholder-wave">success</button>
+                    <button class="col-3 btn danger placeholder placeholder-wave">danger</button>
+                </div>
             </div>
         </div>
     </main>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadButton = document.querySelector('.landing-block .btn.primary');
+            let isLoaded = false;
+
+            if (loadButton) {
+                loadButton.addEventListener('click', function() {
+                    const placeholders = document.querySelectorAll('.placeholder');
+                    
+                    if (!isLoaded) {
+                        // Меняем текст кнопки
+                        loadButton.textContent = 'Обновить';
+                        
+                        // Убираем все классы placeholder
+                        placeholders.forEach(element => {
+                            element.classList.remove('placeholder', 'placeholder-pulse', 'placeholder-wave', 'placeholder-glow');
+                        });
+                        
+                        isLoaded = true;
+                    } else {
+                        // Перезагружаем страницу
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="../assets/js/placeholder.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>
