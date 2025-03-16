@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="../assets/css/card.css">
     <link rel="stylesheet" href="../assets/css/badge.css">
     <link rel="stylesheet" href="../assets/css/input.css">
+    <link rel="stylesheet" href="../assets/css/drivers.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
-
     <link rel="stylesheet" href="../prism/prism.css">
 
     <!-- Icons -->
@@ -70,7 +70,7 @@
                         Layout
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
@@ -112,6 +112,7 @@
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
                         <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
                 </li>
@@ -141,9 +142,9 @@
                         Forms
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -216,11 +217,80 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Driver</h5>
-                
+                <div id="frame" >
+                    <div class="drivers">
+                        <span>Пример с текстом</span>
+                    </div>
+                </div>
+        
+                <div id="frame" class="my-4">
+                    <div class="drivers left">
+                        <span>Пример с текстом слева</span>
+                    </div>
+                </div>
+        
+                <div id="frame">
+                    <div class="drivers right">
+                        <span>Пример с текстом справа</span>
+                    </div>
+                </div>
+        
+                <div id="frame" class="my-4">
+                    <div class="drivers">
+                        <div class="drivers-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="frame" class="my-4">
+                    <div class="drivers">
+                        <button class="btn-driver">Пример с кнопкой</button>
+                    </div>
+                </div>
+        
+                <div id="frame" class="my-4">
+                    <div class="drivers">
+                        <div class="group-btn-driver">
+                            <button class="btn-drivers">A</button>
+                            <button class="btn-drivers">B</button>
+                            <button class="btn-drivers">C</button>
+                            <button class="btn-drivers">D</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="frame" class="my-4">
+                    <!-- Стандартный неоновый в цвет primary -->
+                    <div class="drivers neon center">
+                        <button class="btn-driver">Action</button>
+                    </div>
+                </div>
+                <div id="frame" class="my-4">
+                    <!-- Фиолетовый неоновый -->
+                    <div class="drivers neon-purple center">
+                        <button class="btn-driver">Action</button>
+                    </div>
+                </div>
+                <div id="frame" class="my-4">
+                    <!-- Голубой неоновый -->
+                    <div class="drivers neon-cyan center">
+                        <button class="btn-driver">Action</button>
+                    </div>
+                </div>
+                <div id="frame" class="my-4">
+                    <!-- Голубой неоновый -->
+                    <div class="drivers neon-danger center">
+                        <button class="btn-driver">Action</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     
+    <script src="../assets/js/frame.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>

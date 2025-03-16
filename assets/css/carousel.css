@@ -135,7 +135,7 @@
 [carusel-bs-role="card-carusel"] .carousel-item {
   flex: 0 0 7%;
   height: 350px; /* или другая нужная высота */
-  background-color: #17181d; /* или другой цвет */
+  background-color: var(--bg-secondary-color); /* или другой цвет */
   color: white;
   display: flex;
   align-items: center;

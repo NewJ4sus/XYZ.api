@@ -33,6 +33,12 @@
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
+
+    <style>
+        .grid-auto > * {
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <aside class="aside-left">
@@ -70,7 +76,7 @@
                         Layout
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
@@ -112,6 +118,7 @@
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
                         <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
                 </li>
@@ -141,9 +148,9 @@
                         Forms
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -216,7 +223,44 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Color</h5>
-                
+                <h5 class="mb-3">Default Colors</h5>
+                <div class="grid-auto grid-4 mb-5">
+                    <div class="text-center p-3 bg-primary">primary</div>
+                    <div class="text-center p-3 bg-secondary">secondary</div>
+                    <div class="text-center p-3 bg-success">success</div>
+                    <div class="text-center p-3 bg-danger">danger</div>
+                    <div class="text-center p-3 bg-warning text-dark">warning</div>
+                    <div class="text-center p-3 bg-info text-dark">info</div>
+                    <div class="text-center p-3 bg-light text-dark">light</div>
+                    <div class="text-center p-3 bg-dark">dark</div>
+                </div>
+                <h5 class="mb-3">Default box-shadow</h5>
+                <div class="grid-auto grid-4 mb-5">
+                    <div class="text-center p-3 bg-dark box-shadow-primary">primary</div>
+                    <div class="text-center p-3 bg-dark box-shadow-secondary">secondary</div>
+                    <div class="text-center p-3 bg-dark box-shadow-success">success</div>
+                    <div class="text-center p-3 bg-dark box-shadow-danger">danger</div>
+                    <div class="text-center p-3 bg-dark box-shadow-warning">warning</div>
+                    <div class="text-center p-3 bg-dark box-shadow-info">info</div>
+                    <div class="text-center p-3 bg-dark box-shadow-light">light</div>
+                    <div class="text-center p-3 bg-dark box-shadow-dark">dark</div>
+                </div>
+                <h5 class="mb-3">Neon Colors</h5>
+                <div class="grid-auto grid-4 mb-5">
+                    <div class="text-center p-3 bg-neon-pink">neon-pink</div>
+                    <div class="text-center p-3 bg-neon-blue">neon-blue</div>
+                    <div class="text-center p-3 bg-neon-green">neon-green</div>
+                    <div class="text-center p-3 bg-neon-yellow">neon-yellow</div>
+                    <div class="text-center p-3 bg-neon-red">neon-red</div>
+                </div>
+                <h5 class="mb-3">Neon box-shadow</h5>
+                <div class="grid-auto grid-4 mb-5">
+                    <div class="text-center p-3 bg-dark box-shadow-neon-pink">neon-pink</div>
+                    <div class="text-center p-3 bg-dark box-shadow-neon-blue">neon-blue</div>
+                    <div class="text-center p-3 bg-dark box-shadow-neon-green">neon-green</div>
+                    <div class="text-center p-3 bg-dark box-shadow-neon-yellow">neon-yellow</div>
+                    <div class="text-center p-3 bg-dark box-shadow-neon-red">neon-red</div>
+                </div>
             </div>
         </div>
     </main>

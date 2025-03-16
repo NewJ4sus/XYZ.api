@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/badge.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
+    <link rel="stylesheet" href="../assets/css/spinner.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
@@ -70,7 +71,7 @@
                         Layout
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
@@ -112,6 +113,7 @@
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item active"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
                         <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
                 </li>
@@ -141,9 +143,9 @@
                         Forms
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -216,7 +218,99 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Spinner</h5>
+                <div id="frame">
+                    <div class="main-block text-center">
+                        <div class="grid cols-5">
+                            <div class="card p-3" style="display: flex; align-items: center; justify-content: center;">
+                                <span class="loader"></span>
+                            </div>
+                            <div class="card p-3" style="display: flex; align-items: center; justify-content: center;">
+                                <span class="loader loader-border-sm"></span>
+                            </div>
+                            <div class="card p-3" style="display: flex; align-items: center; justify-content: center;">
+                                <span class="loader loader-border"></span>
+                            </div>
+                            <div class="card p-3" style="display: flex; align-items: center; justify-content: center;">
+                                <span class="loader loader-circle"></span>
+                            </div>
+                            <div class="card p-3" style="display: flex; align-items: center; justify-content: center;">
+                                <span class="loader loader-dots"><span></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block">
+        <pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="card p-3"&gt;
+            &lt;span class="loader" &gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card p-3"&gt;
+            &lt;span class="loader loader-border-sm"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card p-3"&gt;
+            &lt;span class="loader loader-border"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card p-3"&gt;
+            &lt;span class="loader loader-circle"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="card p-3"&gt;
+            &lt;span class="loader loader-dots"&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+        
+                <h5 class="mt-5 mb-3">Position</h5>
+                <div id="frame">
+                    <div class="main-block center">
+                        <div class="loader loader-border" role="status"></div>
+                    </div>
+                    <div class="code-block">
+        <pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="text-center"&gt;
+            &lt;div class="loader loader-border" role="status"&gt;&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
                 
+        
+                <div id="frame" class="mt-5">
+                    <div class="main-block start">
+                        <div class="loader loader-border" role="status"></div>
+                    </div>
+                    <div class="code-block">
+        <pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="text-start"&gt;
+            &lt;div class="loader loader-border" role="status"&gt;&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                
+        
+                <div id="frame" class="mt-5">
+                    <div class="main-block end">
+                        <div class="loader loader-border" role="status"></div>
+                    </div>
+                    <div class="code-block">
+        <pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="text-end"&gt;
+            &lt;div class="loader loader-border" role="status"&gt;&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                
+        
+                <h5 class="mt-5 mb-3">Size</h5>
+                <div id="frame" class="mb-5">
+                    <div class="main-block center">
+                        <div class="loader-sm loader-border" role="status"></div>
+                        <div class="loader-sm loader-circle" role="status"></div>
+                    </div>
+                    <div class="code-block">
+        <pre class="copy-to-clipboard m-0"><code class="language-html">&lt;div class="text-center"&gt;
+            &lt;div class="loader-sm loader-border" role="status"&gt;&lt;/div&gt;
+            &lt;div class="loader-sm loader-circle" role="status"&gt;&lt;/div&gt;
+        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

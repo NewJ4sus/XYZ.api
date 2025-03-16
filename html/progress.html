@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/progress.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -70,7 +71,7 @@
                         Layout
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
@@ -112,6 +113,7 @@
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
                         <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
                 </li>
@@ -141,9 +143,9 @@
                         Forms
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -216,11 +218,59 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Progress</h5>
+                <div class="progress mb-5" data-value="0" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="false">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress mb-5" data-value="25" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="true">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress mb-5" data-value="50" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="true">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress mb-5" data-value="75" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="true">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress mb-5" data-value="100" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="true">
+                    <div class="progress-bar"></div>
+                </div>
+        
+                <div class="progress mb-5" data-value="25" data-valuemin="0" data-valuemax="100" data-height="1px" data-status="false">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress mb-5" data-value="25" data-valuemin="0" data-valuemax="100" data-status="false" data-height="hover(5, 30)">
+                    <div class="progress-bar"></div>
+                </div>
+        
+                <div class="progress mb-5" data-value="25" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="true">
+                    <div class="progress-bar"></div>
+                </div>
+        
+                <div class="progress mb-5" data-value="25" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="false">
+                    <div class="progress-bar bg-success"></div>
+                </div>
+                <div class="progress mb-5" data-value="50" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="false">
+                    <div class="progress-bar bg-info"></div>
+                </div>
+                <div class="progress mb-5" data-value="75" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="false">
+                    <div class="progress-bar bg-warning"></div>
+                </div>
+                <div class="progress mb-5" data-value="100" data-valuemin="0" data-valuemax="100" data-height="20px" data-status="false">
+                    <div class="progress-bar bg-danger"></div>
+                </div>
+        
+                <h5 class="mt-5">Анимации</h5>
+                <div class="progress mb-5" data-value="25" data-height="20px" data-status="true" data-animation="pulse">
+                    <div class="progress-bar"></div>
+                </div>
                 
+                <div class="progress mb-5" data-value="50" data-height="30px" data-status="true" data-animation="wave">
+                    <div class="progress-bar bg-info"></div>
+                </div>
             </div>
         </div>
     </main>
     
+    <script src="../assets/js/progress.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>

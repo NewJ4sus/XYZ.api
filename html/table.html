@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ.api</title>
+
+    <link rel="stylesheet" href="../assets/css/etc/style.css">
+
+    <link rel="stylesheet" href="../assets/css/frame.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/card.css">
+    <link rel="stylesheet" href="../assets/css/badge.css">
+    <link rel="stylesheet" href="../assets/css/input.css">
+    <link rel="stylesheet" href="../assets/css/button.css">
+    <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/table.css">
+    <link rel="stylesheet" href="../assets/css/spinner.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pattern.css">
+
+    <link rel="stylesheet" href="../prism/prism.css">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="../media/img/logo.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <aside class="aside-left">
+        <div class="aside-header py-0">
+            <a href="../index.html" class="nav-link back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 5L9 12L15 19" stroke="#CCCCCC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Home
+            </a>
+        </div>
+        <div class="aside-main">
+            <ul class="aside-nav">
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12.204C2 9.915 2 8.771 2.52 7.823C3.038 6.874 3.987 6.286 5.884 5.108L7.884 3.867C9.889 2.622 10.892 2 12 2C13.108 2 14.11 2.622 16.116 3.867L18.116 5.108C20.013 6.286 20.962 6.874 21.481 7.823C22 8.772 22 9.915 22 12.203V13.725C22 17.625 22 19.576 20.828 20.788C19.656 22 17.771 22 14 22H10C6.229 22 4.343 22 3.172 20.788C2.001 19.576 2 17.626 2 13.725V12.204Z" stroke="#D80452" stroke-width="1.5"/>
+                            <path d="M12 15V18" stroke="#D80452" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Getting started
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Introduction</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Quick start</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Installation</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2.75C15.907 2.75 17.262 2.752 18.29 2.89C19.295 3.025 19.875 3.279 20.298 3.702C20.721 4.125 20.975 4.705 21.11 5.711C21.248 6.739 21.25 8.093 21.25 10C21.25 10.1989 21.329 10.3897 21.4697 10.5303C21.6103 10.671 21.8011 10.75 22 10.75C22.1989 10.75 22.3897 10.671 22.5303 10.5303C22.671 10.3897 22.75 10.1989 22.75 10V9.944C22.75 8.106 22.75 6.65 22.597 5.511C22.439 4.339 22.107 3.39 21.359 2.641C20.61 1.893 19.661 1.561 18.489 1.403C17.349 1.25 15.894 1.25 14.056 1.25H14C13.8011 1.25 13.6103 1.32902 13.4697 1.46967C13.329 1.61032 13.25 1.80109 13.25 2C13.25 2.19891 13.329 2.38968 13.4697 2.53033C13.6103 2.67098 13.8011 2.75 14 2.75ZM9.944 1.25H10C10.1989 1.25 10.3897 1.32902 10.5303 1.46967C10.671 1.61032 10.75 1.80109 10.75 2C10.75 2.19891 10.671 2.38968 10.5303 2.53033C10.3897 2.67098 10.1989 2.75 10 2.75C8.093 2.75 6.739 2.752 5.71 2.89C4.705 3.025 4.125 3.279 3.702 3.702C3.279 4.125 3.025 4.705 2.89 5.71C2.752 6.739 2.75 8.093 2.75 10C2.75 10.1989 2.67098 10.3897 2.53033 10.5303C2.38968 10.671 2.19891 10.75 2 10.75C1.80109 10.75 1.61032 10.671 1.46967 10.5303C1.32902 10.3897 1.25 10.1989 1.25 10V9.944C1.25 8.106 1.25 6.65 1.403 5.511C1.561 4.339 1.893 3.39 2.641 2.641C3.39 1.893 4.339 1.561 5.511 1.403C6.651 1.25 8.106 1.25 9.944 1.25Z" fill="#3C3CFF"/>
+                            <path d="M5.527 5.527C5 6.054 5 6.903 5 8.6C5 9.731 5 10.297 5.351 10.649C5.703 11 6.27 11 7.4 11H8.6C9.731 11 10.297 11 10.649 10.649C11 10.297 11 9.73 11 8.6V7.4C11 6.269 11 5.703 10.649 5.351C10.297 5 9.73 5 8.6 5C6.903 5 6.054 5 5.527 5.527ZM5.527 18.473C5 17.946 5 17.097 5 15.4C5 14.269 5 13.703 5.351 13.351C5.703 13 6.27 13 7.4 13H8.6C9.731 13 10.297 13 10.649 13.351C11 13.703 11 14.269 11 15.4V16.6C11 17.731 11 18.297 10.649 18.648C10.297 19 9.73 19 8.6 19C6.903 19 6.054 19 5.527 18.473ZM13 7.4C13 6.269 13 5.703 13.351 5.351C13.704 5 14.27 5 15.4 5C17.097 5 17.946 5 18.473 5.527C19 6.054 19 6.903 19 8.6C19 9.731 19 10.297 18.648 10.649C18.298 11 17.731 11 16.6 11H15.4C14.269 11 13.703 11 13.351 10.649C13 10.297 13 9.73 13 8.6V7.4ZM13.352 18.649C13 18.297 13 17.73 13 16.6V15.4C13 14.269 13 13.703 13.351 13.351C13.704 13 14.27 13 15.4 13H16.6C17.731 13 18.297 13 18.648 13.351C19 13.703 19 14.269 19 15.4C19 17.097 19 17.946 18.473 18.473C17.946 19 17.097 19 15.4 19C14.269 19 13.703 19 13.351 18.648" fill="#3C3CFF"/>
+                            <path d="M22 13.25C22.1989 13.25 22.3897 13.329 22.5303 13.4697C22.671 13.6103 22.75 13.8011 22.75 14V14.056C22.75 15.894 22.75 17.35 22.597 18.489C22.439 19.661 22.107 20.61 21.359 21.359C20.61 22.107 19.661 22.439 18.489 22.597C17.349 22.75 15.894 22.75 14.056 22.75H14C13.8011 22.75 13.6103 22.671 13.4697 22.5303C13.329 22.3897 13.25 22.1989 13.25 22C13.25 21.8011 13.329 21.6103 13.4697 21.4697C13.6103 21.329 13.8011 21.25 14 21.25C15.907 21.25 17.262 21.248 18.29 21.11C19.295 20.975 19.875 20.721 20.298 20.298C20.721 19.875 20.975 19.295 21.11 18.289C21.248 17.262 21.25 15.907 21.25 14C21.25 13.8011 21.329 13.6103 21.4697 13.4697C21.6103 13.329 21.8011 13.25 22 13.25ZM2.75 14C2.75 13.8011 2.67098 13.6103 2.53033 13.4697C2.38968 13.329 2.19891 13.25 2 13.25C1.80109 13.25 1.61032 13.329 1.46967 13.4697C1.32902 13.6103 1.25 13.8011 1.25 14V14.056C1.25 15.894 1.25 17.35 1.403 18.489C1.561 19.661 1.893 20.61 2.641 21.359C3.39 22.107 4.339 22.439 5.511 22.597C6.651 22.75 8.106 22.75 9.944 22.75H10C10.1989 22.75 10.3897 22.671 10.5303 22.5303C10.671 22.3897 10.75 22.1989 10.75 22C10.75 21.8011 10.671 21.6103 10.5303 21.4697C10.3897 21.329 10.1989 21.25 10 21.25C8.093 21.25 6.739 21.248 5.71 21.11C4.705 20.975 4.125 20.721 3.702 20.298C3.279 19.875 3.025 19.295 2.89 18.289C2.752 17.262 2.75 15.907 2.75 14Z" fill="#3C3CFF"/>
+                        </svg>
+                        Layout
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item active">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 10.911V10.731C3.01823 9.39405 3.48251 8.10149 4.31915 7.0585C5.15579 6.01551 6.31684 5.28186 7.618 4.97401L7.794 4.93401L7.961 4.89801C10.6225 4.31899 13.3775 4.31899 16.039 4.89801L16.206 4.93501L16.382 4.97501C17.7129 5.28985 18.8963 6.04991 19.7362 7.12928C20.576 8.20866 21.0219 9.54256 21 10.91V16.374C20.9998 17.402 20.6491 18.3992 20.0059 19.2011C19.3627 20.003 18.4654 20.5617 17.462 20.785C13.864 21.585 10.136 21.585 6.539 20.785C5.53573 20.5619 4.63843 20.0036 3.99508 19.2021C3.35173 18.4006 3.00074 17.4038 3 16.376V10.911Z" stroke="#00FF00" stroke-width="1.5"/>
+                            <path opacity="0.5" d="M17.5 15.5V17M15.959 4.5C15.8408 3.80079 15.4788 3.16605 14.9371 2.7084C14.3954 2.25075 13.7091 1.99977 13 2H11C10.2909 1.99977 9.60461 2.25075 9.06293 2.7084C8.52125 3.16605 8.1592 3.80079 8.04102 4.5" stroke="#00FF00" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M3 14C5.83335 15.2593 8.89942 15.9099 12 15.9099C15.1006 15.9099 18.1667 15.2593 21 14" stroke="#00FF00" stroke-width="1.5" stroke-linecap="round"/>
+                            <path opacity="0.5" d="M10 13H14" stroke="#00FF00" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Components
+                        <small class="badge bg-neon-pink box-shadow-neon-pink rounded-10 position-absolute-middle-right ml-2">24</small>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./accordion.html" class="submenu-link">Accordions</a></li>
+                        <li class="submenu-item"><a href="./alerts.html" class="submenu-link">Alerts</a></li>
+                        <li class="submenu-item"><a href="./badge.html" class="submenu-link">Badges</a></li>
+                        <li class="submenu-item"><a href="./breadcrumb.html" class="submenu-link">Breadcrumb</a></li>
+                        <li class="submenu-item"><a href="./button.html" class="submenu-link">Buttons</a></li>
+                        <li class="submenu-item"><a href="./button-group.html" class="submenu-link">Button group</a></li>
+                        <li class="submenu-item"><a href="./card.html" class="submenu-link">Cards</a></li>
+                        <li class="submenu-item"><a href="./carousel.html" class="submenu-link">Carousel</a></li>
+                        <li class="submenu-item"><a href="./close-button.html" class="submenu-link">Close button</a></li>
+                        <li class="submenu-item"><a href="./collapse.html" class="submenu-link">Collapse</a></li>
+                        <li class="submenu-item"><a href="./color.html" class="submenu-link">Color</a></li>
+                        <li class="submenu-item"><a href="./dropdown.html" class="submenu-link">Dropdowns</a></li>
+                        <li class="submenu-item"><a href="./drivers.html" class="submenu-link">Drivers</a></li>
+                        <!-- <li class="submenu-item"><a href="#" class="submenu-link">List group</a></li> -->
+                        <li class="submenu-item"><a href="./modal.html" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./navbar.html" class="submenu-link">Navbar</a></li>
+                        <li class="submenu-item"><a href="./navs-and-tabs.html" class="submenu-link">Navs & tabs</a></li>
+                        <li class="submenu-item"><a href="./offcanvas.html" class="submenu-link">Offcanvas</a></li>
+                        <li class="submenu-item"><a href="./pagination.html" class="submenu-link">Pagination</a></li>
+                        <li class="submenu-item"><a href="./placeholder.html" class="submenu-link">Placeholders</a></li>
+                        <li class="submenu-item"><a href="./popover.html" class="submenu-link">Popovers</a></li>
+                        <li class="submenu-item"><a href="./progress.html" class="submenu-link">Progress</a></li>
+                        <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
+                        <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
+                        <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item active"><a href="./table.html" class="submenu-link">Table</a></li>
+                        <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.5" d="M16.5 7.5H13.5" stroke="#FFFF00" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M5 5.217C5 4.644 5 4.357 5.049 4.118C5.262 3.066 6.149 2.244 7.281 2.045C7.538 2 7.847 2 8.465 2C8.735 2 8.871 2 9.001 2.011C9.561 2.06 10.094 2.265 10.527 2.598C10.627 2.676 10.723 2.765 10.915 2.942L11.3 3.3C11.871 3.83 12.157 4.095 12.498 4.272C12.6873 4.36933 12.8853 4.44533 13.092 4.5C13.469 4.6 13.872 4.6 14.68 4.6H14.941C16.784 4.6 17.706 4.6 18.304 5.1C18.3593 5.14667 18.4117 5.19533 18.461 5.246C19 5.802 19 6.658 19 8.369V9.8C19 12.251 19 13.477 18.18 14.238C17.36 15 16.04 15 13.4 15H10.6C7.96 15 6.64 15 5.82 14.239C5 13.477 5 12.25 5 9.8V5.217Z" stroke="#FFFF00" stroke-width="1.5"/>
+                            <path opacity="0.5" d="M22 20H14M2 20H10M12 18V15" stroke="#FFFF00" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20C10 21.1046 10.8954 22 12 22Z" stroke="#FFFF00" stroke-width="1.5"/>
+                        </svg>
+                        Navigation
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4H10C6.229 4 4.343 4 3.172 5.172C2.001 6.344 2 8.229 2 12C2 15.771 2 17.657 3.172 18.828C4.344 19.999 6.229 20 10 20H12M15 4C18.114 4.01 19.765 4.108 20.828 5.172C22 6.343 22 8.229 22 12C22 15.771 22 17.657 20.828 18.828C19.765 19.892 18.114 19.99 15 20" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M9 12C9 12.2652 8.89464 12.5196 8.70711 12.7071C8.51957 12.8946 8.26522 13 8 13C7.73478 13 7.48043 12.8946 7.29289 12.7071C7.10536 12.5196 7 12.2652 7 12C7 11.7348 7.10536 11.4804 7.29289 11.2929C7.48043 11.1054 7.73478 11 8 11C8.26522 11 8.51957 11.1054 8.70711 11.2929C8.89464 11.4804 9 11.7348 9 12ZM13 12C13 12.2652 12.8946 12.5196 12.7071 12.7071C12.5196 12.8946 12.2652 13 12 13C11.7348 13 11.4804 12.8946 11.2929 12.7071C11.1054 12.5196 11 12.2652 11 12C11 11.7348 11.1054 11.4804 11.2929 11.2929C11.4804 11.1054 11.7348 11 12 11C12.2652 11 12.5196 11.1054 12.7071 11.2929C12.8946 11.4804 13 11.7348 13 12Z" fill="#FF0000"/>
+                            <path d="M15 2V22" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Forms
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 18V6M20 6V18" stroke="#00FFBF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M12 10C16.418 10 20 8.21 20 6C20 3.79 16.418 2 12 2C7.582 2 4 3.79 4 6C4 8.21 7.582 10 12 10Z" stroke="#00FFBF" stroke-width="1.5"/>
+                            <path opacity="0.5" d="M20 12C20 14.21 16.418 16 12 16C7.582 16 4 14.21 4 12" stroke="#00FFBF" stroke-width="1.5"/>
+                            <path d="M20 18C20 20.21 16.418 22 12 22C7.582 22 4 20.21 4 18" stroke="#00FFBF" stroke-width="1.5"/>
+                        </svg>
+                        Data
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 8.99998L15.672 9.17198C17.005 10.505 17.672 11.172 17.672 12C17.672 12.828 17.005 13.495 15.672 14.828L15.5 15M13.294 7.16998L12 12L10.706 16.83M8.49998 8.99998L8.32898 9.17198C6.99498 10.505 6.32898 11.172 6.32898 12C6.32898 12.828 6.99498 13.495 8.32898 14.828L8.49998 15" stroke="#6F00FF" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 12C2 7.286 2 4.929 3.464 3.464C4.93 2 7.286 2 12 2C16.714 2 19.071 2 20.535 3.464C22 4.93 22 7.286 22 12C22 16.714 22 19.071 20.535 20.535C19.072 22 16.714 22 12 22C7.286 22 4.929 22 3.464 20.535C2 19.072 2 16.714 2 12Z" stroke="#6F00FF" stroke-width="1.5"/>
+                        </svg>
+                        Utilities
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                    </ul>
+                </li>
+                <li class="aside-item">
+                    <a href="#" class="nav-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 22V20.5M5 22V20.5" stroke="#F0A80E" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 10C2 6.229 2 4.343 3.172 3.172C4.344 2.001 6.229 2 10 2H14C17.771 2 19.657 2 20.828 3.172C21.999 4.344 22 6.229 22 10V12C22 15.771 22 17.657 20.828 18.828C19.656 19.999 17.771 20 14 20H10C6.229 20 4.343 20 3.172 18.828C2.001 17.656 2 15.771 2 12V10Z" stroke="#F0A80E" stroke-width="1.5"/>
+                            <path d="M9 15.5H15M9 6.5H15M2 11H22" stroke="#F0A80E" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        Templates
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="aside-footer">
+            <ul class="aside-nav w-100">
+                <li class="aside-item m-0">
+                    <a href="../html/settings/settings.html" class="nav-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.25C11.0054 8.25 10.0516 8.64509 9.34835 9.34835C8.64509 10.0516 8.25 11.0054 8.25 12C8.25 12.9946 8.64509 13.9484 9.34835 14.6517C10.0516 15.3549 11.0054 15.75 12 15.75C12.9946 15.75 13.9484 15.3549 14.6517 14.6517C15.3549 13.9484 15.75 12.9946 15.75 12C15.75 11.0054 15.3549 10.0516 14.6517 9.34835C13.9484 8.64509 12.9946 8.25 12 8.25ZM9.75 12C9.75 11.4033 9.98705 10.831 10.409 10.409C10.831 9.98705 11.4033 9.75 12 9.75C12.5967 9.75 13.169 9.98705 13.591 10.409C14.0129 10.831 14.25 11.4033 14.25 12C14.25 12.5967 14.0129 13.169 13.591 13.591C13.169 14.0129 12.5967 14.25 12 14.25C11.4033 14.25 10.831 14.0129 10.409 13.591C9.98705 13.169 9.75 12.5967 9.75 12Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C11.295 1.25 10.652 1.444 9.949 1.77C9.269 2.087 8.48 2.553 7.495 3.137L6.741 3.583C5.755 4.167 4.968 4.633 4.361 5.079C3.733 5.541 3.251 6.013 2.903 6.632C2.555 7.251 2.398 7.911 2.323 8.695C2.25 9.455 2.25 10.386 2.25 11.556V12.444C2.25 13.614 2.25 14.544 2.323 15.304C2.398 16.089 2.555 16.75 2.903 17.368C3.252 17.987 3.733 18.459 4.361 18.921C4.968 19.367 5.755 19.833 6.741 20.417L7.495 20.863C8.48 21.447 9.268 21.913 9.949 22.23C10.652 22.556 11.295 22.75 12 22.75C12.705 22.75 13.348 22.556 14.051 22.23C14.731 21.913 15.52 21.447 16.505 20.863L17.259 20.417C18.245 19.833 19.032 19.367 19.639 18.921C20.267 18.459 20.749 17.987 21.097 17.368C21.445 16.749 21.602 16.089 21.677 15.305C21.75 14.545 21.75 13.614 21.75 12.445V11.556C21.75 10.386 21.75 9.456 21.677 8.696C21.602 7.911 21.445 7.25 21.097 6.632C20.748 6.013 20.267 5.541 19.639 5.079C19.032 4.633 18.245 4.167 17.259 3.583L16.505 3.137C15.52 2.553 14.732 2.087 14.051 1.77C13.348 1.444 12.705 1.25 12 1.25ZM8.225 4.447C9.252 3.839 9.976 3.412 10.581 3.131C11.171 2.857 11.591 2.75 12 2.75C12.409 2.75 12.83 2.857 13.42 3.13C14.024 3.412 14.748 3.84 15.775 4.447L16.461 4.854C17.488 5.462 18.211 5.891 18.751 6.288C19.277 6.675 19.581 6.998 19.789 7.368C19.999 7.739 20.119 8.174 20.184 8.838C20.249 9.518 20.25 10.378 20.25 11.594V12.406C20.25 13.622 20.25 14.481 20.184 15.161C20.12 15.826 19.999 16.261 19.789 16.632C19.581 17.002 19.277 17.325 18.751 17.712C18.211 18.109 17.488 18.538 16.461 19.146L15.775 19.553C14.748 20.161 14.024 20.588 13.419 20.869C12.829 21.143 12.409 21.25 12 21.25C11.591 21.25 11.17 21.143 10.58 20.87C9.976 20.588 9.252 20.16 8.225 19.553L7.539 19.146C6.512 18.538 5.789 18.109 5.249 17.712C4.723 17.325 4.419 17.002 4.211 16.632C4.001 16.261 3.88 15.826 3.816 15.162C3.751 14.482 3.75 13.622 3.75 12.406V11.594C3.75 10.378 3.75 9.519 3.816 8.839C3.88 8.174 4.001 7.739 4.21 7.368C4.419 6.998 4.723 6.675 5.25 6.288C5.79 5.891 6.512 5.462 7.54 4.854L8.225 4.447Z" fill="white"/>
+                        </svg>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <header hidden>
+        Nav for mobile
+    </header>
+
+    <main class="landing-container">
+        <div class="landing-block">
+            <div class="container mb-5">
+                <h5 class="mb-5">Table</h5>
+                <div>
+                    <h5>Default</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="my-5">
+                    <h5>Striped</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                  
+                <div>
+                    <h5>Striped Columns</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-striped-columns">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td colspan="2">Jane Smith</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="my-5">
+                    <h5>Bordered</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Laptop</td>
+                                <td>$1200</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Phone</td>
+                                <td>$800</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div>
+                    <h5>Bordered Primary</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-bordered border-primary">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Laptop</td>
+                                <td>$1200</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Phone</td>
+                                <td>$800</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+            
+                <div class="my-5">
+                    <h5>Small</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-sm">
+                            <thead>
+                              <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>101</td>
+                                <td>John Doe</td>
+                                <td>$150</td>
+                              </tr>
+                              <tr>
+                                <td>102</td>
+                                <td>Jane Smith</td>
+                                <td>$200</td>
+                              </tr>
+                            </tbody>
+                        </table>              
+                    </div>
+                </div>
+            
+                <div>
+                    <h5>Hover</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="my-5">
+                    <h5>Hover item</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-hover-item">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div>
+                    <h5>Rounded</h5>
+                    <div id="frame" class="p-3">
+                        <table class="table table-bordered table-rounded">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>+7 999 999 99 99</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="my-5">
+                    <h5>Responsive</h5>
+                    <div id="frame" class="p-3">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Name</th>
+                                  <th>Email</th>
+                                  <th>Address</th>
+                                  <th>Phone</th>
+                                  <th>Company</th>
+                                  <th>Position</th>
+                                  <th>Salary</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>John Doe</td>
+                                  <td>john@example.com</td>
+                                  <td>123 Main St, City</td>
+                                  <td>+1234567890</td>
+                                  <td>Company A</td>
+                                  <td>Developer</td>
+                                  <td>$5000</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Jane Smith</td>
+                                  <td>jane@example.com</td>
+                                  <td>456 Elm St, Town</td>
+                                  <td>+0987654321</td>
+                                  <td>Company B</td>
+                                  <td>Designer</td>
+                                  <td>$4500</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../assets/js/frame.js"></script>
+    <script src="../assets/js/accordion.js"></script>
+    <script src="../prism/prism.js"></script>
+    <script src="../assets/js/etc/script.js"></script>
+</body>
+</html>

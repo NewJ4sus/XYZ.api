@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <link rel="stylesheet" href="../prism/prism.css">
 
@@ -33,6 +33,31 @@
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
+
+    <style>
+        .list-group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+        }
+        .list-group li{
+            list-style: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .list-group li:hover{
+            background-color: #0f1014;
+        }
+        .list-group li.active{
+            background-color: #17181D;
+        }
+        .list-group li span{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
     <aside class="aside-left">
@@ -70,7 +95,7 @@
                         Layout
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Grid system</a></li>
+                        <li class="submenu-item"><a href="./grid.html" class="submenu-link">Grid system</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Containers</a></li>
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
@@ -112,6 +137,7 @@
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
                         <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
                 </li>
@@ -141,9 +167,9 @@
                         Forms
                     </a>
                     <ul class="submenu">
-                        <li class="submenu-item"><a href="#" class="submenu-link">Buttons</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cards</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
+                        <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
+                        <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
+                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -216,7 +242,46 @@
         <div class="landing-block">
             <div class="container mb-5">
                 <h5 class="mb-5">Badge</h5>
-                
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span>Home</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>News <span class="badge rounded-circle bg-neon-pink box-shadow-neon-pink"></span></span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>About</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span>Contact</span>
+                    </li>
+                </ul>
+
+                <h1 class="mb-2">Badge <span class="badge">default</span></h1>
+                <h2 class="mb-2">Badge <span class="badge">default</span></h2>
+                <h3 class="mb-2">Badge <span class="badge">default</span></h3>
+                <h4 class="mb-2">Badge <span class="badge">default</span></h4>
+                <h5 class="mb-2">Badge <span class="badge">default</span></h5>
+                <h6 class="mb-2">Badge <span class="badge">default</span></h6>
+
+                <div class="grid my-5">
+                    <button class="btn primary col-6 col-md-4 col-lg-3">
+                        Button <span class="badge">badge</span>
+                    </button>
+            
+                    <button class="btn primary col-6 col-md-4 col-lg-3">
+                        Button <span class="badge">4</span>
+                    </button>
+            
+                    <button class="btn primary col-6 col-md-4 col-lg-3 position-relative">
+                        Button <span class="badge rounded-10 position-absolute top-0 start-100 translate-middle">badge</span>
+                    </button>
+            
+                    <button class="btn primary col-6 col-md-4 col-lg-3 position-relative">
+                        Button <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-circle"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </main>

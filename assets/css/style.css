@@ -17,6 +17,7 @@
     --link-color: #0d6efd;
     --link-hover-color: #0a58ca;
 
+    --primary-rgb: 59, 130, 246;
     --bg-primary-color: #0d6efd;
     --bg-primary-color-moon: #0d6efd;
 
@@ -74,13 +75,13 @@
     --link-hover-color: #0a58ca;
 
     --bg-primary-color: #4C49E2;
-    --bg-secondary-color: #17181D;
+    --bg-secondary-color: #1d1e25;
     --bg-success-color: #198754;
     --bg-danger-color: #E24949;
     --bg-warning-color: #ffc107;
     --bg-info-color: #49D9E2;
     --bg-light-color: #EEFFFB;
-    --bg-dark-color: #17181D;
+    --bg-dark-color: #131418;
 
     --box-shadow-primary: 0px 0px 20px 0px rgba(76, 73, 226, 0.5);
     --box-shadow-secondary: 0px 0px 20px 0px rgba(108, 117, 125, 0.5);
