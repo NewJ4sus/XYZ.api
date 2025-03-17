@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/badge.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
+    <link rel="stylesheet" href="../assets/css/table.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
@@ -203,8 +204,53 @@
     <main class="landing-container">
         <div class="landing-block">
             <div class="container mb-5">
-                <h5 class="mb-5">Alerts</h5>
-                
+                <h5 class="mb-5">Alerts (Оповещения)</h5>
+                <ul class="ul-basic">
+                    <li>
+                        <b>Описание:</b> Это компонент, который используется для отображения важных сообщений пользователю, таких как предупреждения, ошибки, успешные действия или информационные уведомления.
+                    </li>
+                    <li>
+                        <b>Особенности:</b>
+                        <ul>
+                            <li>Обычно статичны (не требуют взаимодействия для отображения).</li>
+                            <li>Могут иметь разные стили в зависимости от типа сообщения (например, успех, ошибка, предупреждение, информация).</li>
+                            <li>Пример: "Ваш пароль успешно изменен" или "Ошибка: поле не заполнено".</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Использование:</b> Для информирования пользователя о результатах действий или важных событиях.
+                    </li>
+                </ul>
+                <table class="table table-bordered table-rounded">
+                    <thead>
+                      <tr>
+                        <th>Компонент</th>
+                        <th>Цель</th>
+                        <th>Взаимодействие</th>
+                        <th>Пример использования</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Collapse</td>
+                        <td>Скрыть/показать один блок контента</td>
+                        <td>По клику на элемент</td>
+                        <td>Кнопка "Подробнее"</td>
+                      </tr>
+                      <tr>
+                        <td>Accordion</td>
+                        <td>Упорядочить несколько блоков</td>
+                        <td>По клику, только один или несколько блоков</td>
+                        <td>FAQ, меню</td>
+                      </tr>
+                      <tr>
+                        <td>Alerts</td>
+                        <td>Информировать пользователя</td>
+                        <td>Обычно статично</td>
+                        <td>Уведомления об ошибках или успехе</td>
+                      </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>

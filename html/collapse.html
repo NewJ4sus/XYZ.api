@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../assets/css/badge.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
-    <link rel="stylesheet" href="../assets/css/accordion.css">
     <link rel="stylesheet" href="../assets/css/collapse.css">
+    <link rel="stylesheet" href="../assets/css/table.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -204,14 +204,58 @@
     <main class="landing-container">
         <div class="landing-block">
             <div class="container mb-5">
-                <h5 class="mb-5">Collapse</h5>
-
+                <h5 class="mb-5">Collapse (Сворачивание)</h5>
+                <ul class="ul-basic">
+                    <li>
+                        <b>Описание:</b> Компонент, который позволяет скрывать или отображать контент при взаимодействии с пользователем (например, по клику на кнопку или заголовок).
+                    </li>
+                    <li>
+                        <b>Особенности:</b>
+                        <ul>
+                            <li>Обычно используется для скрытия/раскрытия одного блока контента.</li>
+                            <li>Может быть частью более сложных компонентов, таких как аккордеон.</li>
+                            <li>Пример: кнопка "Показать больше", которая раскрывает скрытый текст.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Использование:</b> Когда нужно скрыть часть контента, чтобы не перегружать страницу.
+                    </li>
+                </ul>
+                <table class="table table-bordered table-rounded">
+                    <thead>
+                      <tr>
+                        <th>Компонент</th>
+                        <th>Цель</th>
+                        <th>Взаимодействие</th>
+                        <th>Пример использования</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Collapse</td>
+                        <td>Скрыть/показать один блок контента</td>
+                        <td>По клику на элемент</td>
+                        <td>Кнопка "Подробнее"</td>
+                      </tr>
+                      <tr>
+                        <td>Accordion</td>
+                        <td>Упорядочить несколько блоков</td>
+                        <td>По клику, только один или несколько блоков</td>
+                        <td>FAQ, меню</td>
+                      </tr>
+                      <tr>
+                        <td>Alerts</td>
+                        <td>Информировать пользователя</td>
+                        <td>Обычно статично</td>
+                        <td>Уведомления об ошибках или успехе</td>
+                      </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
     
     <script src="../assets/js/collapse.js"></script>
-    <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>
 </body>

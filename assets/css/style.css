@@ -191,3 +191,74 @@ kbd {
 *::-webkit-scrollbar-thumb:hover {
     background: #777; /* Темный цвет при наведении */
 }
+
+/* Base list styles */
+.ul-basic {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Primary list items */
+.ul-basic > li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.ul-basic > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Nested lists */
+.ul-basic > li > ul {
+    margin-top: 0.75rem;
+}
+
+.ul-basic > li > ul > li {
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.ul-basic > li > ul > li::before {
+    width: 4px;
+    height: 4px;
+    background-color: var(--secondary-color);
+}
+
+/* Third level and deeper */
+.ul-basic > li > ul > li > ul {
+    margin-top: 0.5rem;
+}
+
+.ul-basic > li > ul > li > ul > li {
+    padding-left: 1rem;
+    margin-bottom: 0.375rem;
+}
+
+.ul-basic > li > ul > li > ul > li::before {
+    width: 3px;
+    height: 3px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+/* Text formatting within lists */
+.ul-basic li b {
+    color: var(--heading-color);
+    font-weight: 900;
+}
+
+/* Spacing after lists */
+.ul-basic:last-child {
+    margin-bottom: 0;
+}
