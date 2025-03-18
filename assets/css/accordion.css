@@ -1,109 +1,171 @@
-.accordion {
-    margin: 2rem auto;
+/* Base UI Component Styles */
+.ui {
+    margin: 1rem 0;
 }
 
-.accordion-item {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Item Styles */
+.ui-item {
+    background: var(--surface-2);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.75rem;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.accordion-header {
+.ui-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.ui-header {
     width: 100%;
-    padding: 1rem;
-    border: none;
+    padding: 1rem 1.25rem;
     background: transparent;
-    color: inherit;
+    border: none;
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-.accordion-header:hover {
-    background: rgba(255, 255, 255, 0.1);
+.ui-header:hover {
+    background: var(--surface-3);
 }
 
-.accordion-icon {
+/* Icon Styles */
+.ui-icon {
+    width: 20px;
+    height: 20px;
     transition: transform 0.3s ease;
+    color: var(--text-color-secondary);
 }
 
-.accordion-item.active .accordion-icon {
+.ui-item.active .ui-icon {
     transform: rotate(-180deg);
+    color: var(--primary-color);
 }
 
-.accordion-collapse {
+/* Content Styles */
+.ui-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    background: var(--surface-1);
 }
 
-.accordion-body {
-    padding: 0 1rem 1rem;
+.ui-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-color-secondary);
 }
 
-.accordion-item.active .accordion-collapse {
+.ui-item.active .ui-content {
     max-height: 200px; /* Adjust based on content */
+    border-top: 1px solid var(--border-color);
 }
 
-.collapse {
-    margin: 2rem auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    overflow: hidden;
-}
-
-.collapse-header {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    background: transparent;
-    color: inherit;
+/* Collapse Specific Styles */
+.ui-header[data-collapse-target] {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    width: fit-content;
+    background: var(--surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
 }
 
-.collapse-header:hover {
-    background: rgba(255, 255, 255, 0.1);
+.ui-header[data-collapse-target]:hover {
+    background: var(--surface-3);
+    border-color: var(--primary-color);
 }
 
-.collapse-icon {
-    transition: transform 0.3s ease;
+.ui-header[data-collapse-target].active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
 }
 
-.collapse.active .collapse-icon {
+.ui-header[data-collapse-target].active .ui-icon {
     transform: rotate(-180deg);
+    color: white;
 }
 
-.collapse-content {
+.ui[data-ui="collapse"] {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 1rem;
+    transition: all 0.3s ease-out;
+    background: var(--surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
-.collapse.active .collapse-content {
-    max-height: 200px; /* Adjust based on content */
+.ui[data-ui="collapse"].show {
+    max-height: none; /* Changed from fixed height to none */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.nostyle{
-    background-color: transparent;
-    border: none;
-    padding: 0;
+.ui[data-ui="collapse"] .ui-content {
+    padding: 1.25rem;
+}
+
+.ui[data-ui="collapse"] .ui-content p {
     margin: 0;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
-.collapse-btn{
-    background-color: transparent;
-    padding: 0px;
-    margin: 0;
-    border: none;
-    outline: none;
+/* Animation for active state */
+.ui-item.active,
+.ui[data-ui="collapse"].active {
+    border-color: var(--primary-color);
+}
+
+/* CSS Variables (add these to your root) */
+:root {
+    --surface-1: rgba(255, 255, 255, 0.03);
+    --surface-2: rgba(255, 255, 255, 0.05);
+    --surface-3: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --primary-color: #3C3CFF;
+    --text-color: rgba(255, 255, 255, 0.9);
+    --text-color-secondary: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark theme support */
+[data-theme="dark"] {
+    --surface-1: rgba(0, 0, 0, 0.2);
+    --surface-2: rgba(0, 0, 0, 0.3);
+    --surface-3: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ui {
+        margin: 0.5rem 0;
+    }
+
+    .ui-header {
+        padding: 0.875rem 1rem;
+    }
+
+    .ui-content p {
+        padding: 0.875rem 1rem;
+    }
 }
