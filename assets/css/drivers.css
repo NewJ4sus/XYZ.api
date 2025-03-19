@@ -118,33 +118,33 @@
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(var(--primary-rgb), 0.1) 20%,
-        rgba(var(--primary-rgb), 1) 50%,
-        rgba(var(--primary-rgb), 0.1) 80%,
+        rgba(33, 15, 20, 0.1) 20%,
+        rgba(59, 130, 246, 1) 50%,
+        rgba(33, 15, 20, 0.1) 80%,
         transparent 100%
     );
 }
 
 .drivers.neon::after {
     color: var(--bg-primary-color);
-    text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 .drivers.neon .btn-driver {
     color: var(--bg-primary-color);
-    text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
     background-color: #17181d;
     box-shadow: none;
-    text-shadow: 0px 0px 40px rgba(var(--primary-rgb));
+    text-shadow: 0px 0px 40px rgba(59, 130, 246);
 }
 
 .drivers.neon-purple::before {
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(147, 51, 234, 0.1) 20%,
+        rgba(33, 15, 20, 0.1) 20%,
         rgba(147, 51, 234, 1) 50%,
-        rgba(147, 51, 234, 0.1) 80%,
+        rgba(33, 15, 20, 0.1) 80%,
         transparent 100%
     );
 }
@@ -166,9 +166,9 @@
     background: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(34, 211, 238, 0.1) 20%,
+        rgba(33, 15, 20, 0.1) 20%,
         rgba(34, 211, 238, 1) 50%,
-        rgba(34, 211, 238, 0.1) 80%,
+        rgba(33, 15, 20, 0.1) 80%,
         transparent 100%
     );
 }
