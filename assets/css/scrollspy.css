@@ -1,0 +1,191 @@
+/* Container styles */
+.scrollspy-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation styles */
+.scrollspy-nav {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    padding: 1.5rem;
+    background: var(--background-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--border-rgb), 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.scrollspy-nav .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollspy-nav .nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.scrollspy-nav .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollspy-nav .nav-link:hover {
+    background: rgba(var(--primary-rgb), 0.05);
+    color: var(--primary-color);
+}
+
+.scrollspy-nav .nav-link.active {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.scrollspy-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--primary-color);
+    border-radius: 0 4px 4px 0;
+}
+
+/* Nested navigation */
+.scrollspy-nav .nav .nav {
+    margin-left: 1.25rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(var(--border-rgb), 0.2);
+}
+
+.scrollspy-nav .nav .nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Content styles */
+.scrollspy-content {
+    flex: 1;
+    height: 600px;
+    overflow-y: auto;
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--border-rgb), 0.1);
+    scroll-behavior: smooth;
+}
+
+.scrollspy-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollspy-content::-webkit-scrollbar-track {
+    background: rgba(var(--border-rgb), 0.05);
+    border-radius: 4px;
+}
+
+.scrollspy-content::-webkit-scrollbar-thumb {
+    background: rgba(var(--primary-rgb), 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.scrollspy-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--primary-rgb), 0.3);
+}
+
+/* Section styles */
+.scrollspy-content section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(var(--border-rgb), 0.1);
+}
+
+.scrollspy-content section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.scrollspy-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: var(--heading-color);
+}
+
+.scrollspy-content h3 {
+    margin: 2rem 0 1rem;
+    font-size: 1.35rem;
+    color: var(--heading-color);
+}
+
+/* Right position variant */
+.scrollspy-container.nav-right {
+    flex-direction: row-reverse;
+}
+
+/* Separate position variant */
+.scrollspy-nav.nav-separate {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 240px;
+}
+
+/* Dark theme enhancements */
+[data-theme="dark"] .scrollspy-nav,
+[data-theme="dark"] .scrollspy-content {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .scrollspy-container {
+        flex-direction: column;
+    }
+
+    .scrollspy-nav {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .scrollspy-nav.nav-separate {
+        display: none;
+    }
+}
+
+/* Animation for active state */
+@keyframes linkActivate {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scrollspy-nav .nav-link.active {
+    animation: linkActivate 0.3s ease forwards;
+}
