@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/css/badge.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
-    <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/modal.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -205,11 +205,69 @@
             <div class="container mb-5">
                 <h5 class="mb-5">Modal</h5>
                 
+                <!-- Modal Triggers -->
+                <div class="grid-auto grid-4 mb-5">
+                    <button class="btn primary" data-modal-target="fade-modal">Fade Modal</button>
+                    <button class="btn success" data-modal-target="slide-modal">Slide Modal</button>
+                    <button class="btn warning" data-modal-target="scale-modal">Scale Modal</button>
+                </div>
+    
+                <!-- Fade Modal -->
+                <div id="fade-modal" class="modal fade">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Fade Modal</h5>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a simple fade animation modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary modal-close">Close</button>
+                            <button class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Slide Modal -->
+                <div id="slide-modal" class="modal slide">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Slide Modal</h5>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This modal slides in from the top.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary modal-close">Close</button>
+                            <button class="btn btn-success">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Scale Modal -->
+                <div id="scale-modal" class="modal scale">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Scale Modal</h5>
+                            <button class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>This modal scales up when opening.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary modal-close">Close</button>
+                            <button class="btn btn-warning">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </main>
     
-    <script src="../assets/js/accordion.js"></script>
+    <script src="../assets/js/modal.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>
 </body>

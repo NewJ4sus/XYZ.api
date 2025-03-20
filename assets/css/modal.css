@@ -1,0 +1,102 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--bg-color);
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+/* Fade animation */
+.modal.fade .modal-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-out;
+}
+
+.modal.fade.active .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide animation */
+.modal.slide .modal-content {
+    transform: translateY(-100vh);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.slide.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Scale animation */
+.modal.scale .modal-content {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.scale.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}

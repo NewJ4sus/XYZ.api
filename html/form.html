@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
-    <link rel="stylesheet" href="../assets/css/notification.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -76,7 +75,7 @@
                         <li class="submenu-item"><a href="#" class="submenu-link">Responsive</a></li>
                     </ul>
                 </li>
-                <li class="aside-item active">
+                <li class="aside-item">
                     <a href="#" class="nav-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 10.911V10.731C3.01823 9.39405 3.48251 8.10149 4.31915 7.0585C5.15579 6.01551 6.31684 5.28186 7.618 4.97401L7.794 4.93401L7.961 4.89801C10.6225 4.31899 13.3775 4.31899 16.039 4.89801L16.206 4.93501L16.382 4.97501C17.7129 5.28985 18.8963 6.04991 19.7362 7.12928C20.576 8.20866 21.0219 9.54256 21 10.91V16.374C20.9998 17.402 20.6491 18.3992 20.0059 19.2011C19.3627 20.003 18.4654 20.5617 17.462 20.785C13.864 21.585 10.136 21.585 6.539 20.785C5.53573 20.5619 4.63843 20.0036 3.99508 19.2021C3.35173 18.4006 3.00074 17.4038 3 16.376V10.911Z" stroke="#00FF00" stroke-width="1.5"/>
@@ -112,7 +111,7 @@
                         <li class="submenu-item"><a href="./progress.html" class="submenu-link">Progress</a></li>
                         <li class="submenu-item"><a href="./scrollspy.html" class="submenu-link">Scrollspy</a></li>
                         <li class="submenu-item"><a href="./spinner.html" class="submenu-link">Spinners</a></li>
-                        <li class="submenu-item active"><a href="./notification.html" class="submenu-link">Notification</a></li>
+                        <li class="submenu-item"><a href="./notification.html" class="submenu-link">Notification</a></li>
                         <li class="submenu-item"><a href="./table.html" class="submenu-link">Table</a></li>
                         <li class="submenu-item"><a href="./tooltip.html" class="submenu-link">Tooltips</a></li>
                     </ul>
@@ -133,7 +132,7 @@
                         <li class="submenu-item"><a href="#" class="submenu-link">Modals</a></li>
                     </ul>
                 </li>
-                <li class="aside-item">
+                <li class="aside-item active">
                     <a href="#" class="nav-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4H10C6.229 4 4.343 4 3.172 5.172C2.001 6.344 2 8.229 2 12C2 15.771 2 17.657 3.172 18.828C4.344 19.999 6.229 20 10 20H12M15 4C18.114 4.01 19.765 4.108 20.828 5.172C22 6.343 22 8.229 22 12C22 15.771 22 17.657 20.828 18.828C19.765 19.892 18.114 19.99 15 20" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round"/>
@@ -145,7 +144,7 @@
                     <ul class="submenu">
                         <li class="submenu-item"><a href="./input.html" class="submenu-link">Input</a></li>
                         <li class="submenu-item"><a href="./input-group.html" class="submenu-link">Input group</a></li>
-                        <li class="submenu-item"><a href="./form.html" class="submenu-link">Form</a></li>
+                        <li class="submenu-item active"><a href="./form.html" class="submenu-link">Form</a></li>
                     </ul>
                 </li>
                 <li class="aside-item">
@@ -204,110 +203,117 @@
     <main class="landing-container">
         <div class="landing-block">
             <div class="container mb-5">
-                <h5 class="mb-5">Notification</h5>
-                <div class="form-container">
-                    <!-- Простой кастомный notification -->
-                    <div class="input-container grid">
-                        <input id="input-checkbox0" type="checkbox" name="position-notification" value="top">
-                        <label class="input-select-label" for="input-checkbox0">top</label>
-            
-                        <input id="input-checkbox1" type="checkbox" name="position-notification" value="bottom">
-                        <label class="input-select-label" for="input-checkbox1">bottom</label>
-            
-                        <input id="input-checkbox2" type="checkbox" name="position-notification" value="center">
-                        <label class="input-select-label" for="input-checkbox2">center</label>
-            
-                        <input id="input-checkbox3" type="checkbox" name="position-notification" value="left">
-                        <label class="input-select-label" for="input-checkbox3">left</label>
-
-                        <input id="input-checkbox4" type="checkbox" name="position-notification" value="right">
-                        <label class="input-select-label" for="input-checkbox4">right</label>
-                    </div>
-                    
+                <h5 class="mb-5">Input</h5>
+                <div class="grid-auto grid-2 gap-3">
+                    <div>
+                        <div class="input-container label-top">
+                            <input id="input-text" type="text" placeholder="text">
+                            <label for="input-text">Login</label>
+                        </div>
         
-                    <div class="grid-auto grid-4 my-4">
-                        <button class="btn primary" id="notifyBtn0">Показать custom</button>
+                        <div class="input-container label-top">
+                            <input id="input-email1" type="email" placeholder="email">
+                            <label for="input-email1">Email</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-text" type="search" placeholder="">
+                            <label for="input-text">search</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-password" type="password" placeholder="">
+                            <label for="input-password">password</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-email" type="email" placeholder="">
+                            <label for="input-email">email</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-number" type="number" placeholder="">
+                            <label for="input-number">number</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-number1" type="number" placeholder="" min="1" max="20">
+                            <label for="input-number1">number</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-tel" type="tel" placeholder="">
+                            <label for="input-tel">tel</label>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-textarea" type="textarea" placeholder="">
+                            <label for="input-textarea">textarea</label>
+                        </div>
                     </div>
-
-                    <div class="grid-auto grid-4 my-4">
-                        <button class="btn primary" id="notifyBtn1">Показать simple</button>
-                        <button class="btn primary" id="notifyBtn2">Показать header-body</button>
-                        <button class="btn primary" id="notifyBtn3">Показать full</button>
+            
+                    <div>
+                        <div class="input-container">
+                            <input id="input-range" type="range" placeholder="" min="1" max="100">
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-date" type="date" placeholder="">
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-color" type="color" placeholder="">
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-time" type="time" placeholder="">
+                        </div>
+                
+                        <div class="input-container">
+                            <select id="input-select" placeholder="">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+                
+                        <div class="input-container">
+                            <input id="input-file" type="file">
+                        </div>
+                
+                        <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
+                            <input id="input-checkbox0" type="checkbox" name="programming" value="HTML">
+                            <label class="input-select-label" for="input-checkbox0">HTML</label>
+                
+                            <input id="input-checkbox1" type="checkbox" name="programming" value="CSS">
+                            <label class="input-select-label" for="input-checkbox1">CSS</label>
+                
+                            <input id="input-checkbox2" type="checkbox" name="programming" value="JS">
+                            <label class="input-select-label" for="input-checkbox2">JS</label>
+                
+                            <input id="input-checkbox3" type="checkbox" name="programming" value="TS">
+                            <label class="input-select-label" for="input-checkbox3">TS</label>
+                        </div>
+                
+                        <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
+                            <input id="input-radio0" type="radio" name="programming" value="HTML">
+                            <label class="input-select-label" for="input-radio0">HTML</label>
+                
+                            <input id="input-radio1" type="radio" name="programming" value="CSS">
+                            <label class="input-select-label" for="input-radio1">CSS</label>
+                
+                            <input id="input-radio2" type="radio" name="programming" value="JS">
+                            <label class="input-select-label" for="input-radio2">JS</label>
+                
+                            <input id="input-radio3" type="radio" name="programming" value="TS">
+                            <label class="input-select-label" for="input-radio3">TS</label>
+                        </div>
                     </div>
-        
-                    
                 </div>
             </div>
         </div>
     </main>
     
-
-    <script>
-        document.getElementById("notifyBtn0").addEventListener("click", function () {
-            // Получаем все чекбоксы
-            const checkboxes = document.querySelectorAll("input[name='position-notification']:checked");
-            
-            // Формируем строку позиции (например, "top left" или "bottom center")
-            let positions = Array.from(checkboxes).map(cb => cb.value).join(" ");
-            
-            // Если позиции не выбраны, ставим дефолтное "bottom right"
-            if (!positions) {
-                positions = "bottom right";
-            }
-
-            // Вызываем уведомление с выбранными позициями
-            showNotification({
-                title: "Custom Notification",
-                message: `Уведомление с кастомным положением: ${positions}`,
-                type: "notification-full",
-                position: positions,
-                timeout: 3000
-            });
-        });
-
-        document.getElementById("notifyBtn1").addEventListener("click", function () {
-            showNotification({
-                title: "Simple Notification",
-                type: "notification-simple",
-                position: "bottom right",
-                timeout: 3000
-            });
-        });
-
-        document.getElementById("notifyBtn2").addEventListener("click", function () {
-            showNotification({
-                title: "XYZ.api",
-                message: "Привет, это сообщение от xyz.api",
-                type: "notification-header-body",
-                position: "bottom right",
-                timeout: 3000,
-                srcImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIy0Tcy7duh8fB4ZxZLtO1Z9rr5QdEHNeCQ&s",
-            });
-        });
-
-        document.getElementById("notifyBtn3").addEventListener("click", function () {
-            showNotification({
-                title: "Full Notification",
-                message: "Это полное уведомление с заголовком, текстом и футером!",
-                type: "notification-full",
-                position: "bottom right",
-                timeout: 3000,
-                srcImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIy0Tcy7duh8fB4ZxZLtO1Z9rr5QdEHNeCQ&s",
-                footerButtons: [
-                    {
-                        label: "Написать",
-                        onClick: "alert('You clicked OK!')"
-                    },
-                    {
-                        label: "Отменить",
-                        onClick: "alert('You clicked Cancel!')"
-                    }
-                ]
-            });
-        });
-
-    </script>
-    <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>
