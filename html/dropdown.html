@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/button.css">
     <link rel="stylesheet" href="../assets/css/accordion.css">
+    <link rel="stylesheet" href="../assets/css/dropdown.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/pattern.css">
 
@@ -174,10 +175,125 @@
             <div class="container mb-5">
                 <h5 class="mb-5">Dropdown</h5>
                 
+                
+
+                <!-- Centered Items Dropdown Example -->
+                <div class=" mb-4">
+                    <div class="card-header">
+                        <h6>Centered Items Dropdown</h6>
+                        <p class="text-muted">Dropdown with centered selected item and visible items above/below</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="dropdown centered-items" data-position="bottom left">
+                            <button class="dropdown-toggle">Select a month</button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">January</a>
+                                <a href="#" class="dropdown-item">February</a>
+                                <a href="#" class="dropdown-item">March</a>
+                                <a href="#" class="dropdown-item selected">April</a>
+                                <a href="#" class="dropdown-item">May</a>
+                                <a href="#" class="dropdown-item">June</a>
+                                <a href="#" class="dropdown-item">July</a>
+                                <a href="#" class="dropdown-item">August</a>
+                                <a href="#" class="dropdown-item">September</a>
+                                <a href="#" class="dropdown-item">October</a>
+                                <a href="#" class="dropdown-item">November</a>
+                                <a href="#" class="dropdown-item">December</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Dropdown Examples -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6>Standard Dropdowns</h6>
+                        <p class="text-muted">Basic dropdown examples with different positioning options</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex gap-3 flex-wrap">
+                            <div class="dropdown" data-position="bottom left">
+                                <button class="dropdown-toggle">Bottom Left</button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown" data-position="bottom right">
+                                <button class="dropdown-toggle">Bottom Right</button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown" data-position="top left">
+                                <button class="dropdown-toggle">Top Left</button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown" data-position="top right">
+                                <button class="dropdown-toggle">Top Right</button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another action</a>
+                                    <a href="#" class="dropdown-item">Something else</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usage Documentation -->
+                <div class="">
+                    <div class="card-header">
+                        <h6>Usage</h6>
+                        <p class="text-muted">How to implement the dropdown component</p>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-3">Basic Structure</h6>
+                        <pre><code class="language-html">&lt;div class="dropdown" data-position="bottom left"&gt;
+    &lt;button class="dropdown-toggle"&gt;Dropdown&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a href="#" class="dropdown-item"&gt;Action&lt;/a&gt;
+        &lt;a href="#" class="dropdown-item"&gt;Another action&lt;/a&gt;
+        &lt;a href="#" class="dropdown-item"&gt;Something else&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                        <h6 class="mb-3 mt-4">Centered Items Variant</h6>
+                        <pre><code class="language-html">&lt;div class="dropdown centered-items" data-position="bottom left"&gt;
+    &lt;button class="dropdown-toggle"&gt;Select an option&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+        &lt;a href="#" class="dropdown-item"&gt;Option 1&lt;/a&gt;
+        &lt;a href="#" class="dropdown-item selected"&gt;Option 2&lt;/a&gt;
+        &lt;a href="#" class="dropdown-item"&gt;Option 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                        <h6 class="mb-3 mt-4">Position Options</h6>
+                        <p>Use the <code>data-position</code> attribute to control dropdown menu positioning:</p>
+                        <ul class="mb-3">
+                            <li><code>bottom left</code> (default)</li>
+                            <li><code>bottom right</code></li>
+                            <li><code>top left</code></li>
+                            <li><code>top right</code></li>
+                        </ul>
+                        <p>The order of position values doesn't matter (e.g., <code>right bottom</code> works the same as <code>bottom right</code>).</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     
+    <script src="../assets/js/dropdown.js"></script>
     <script src="../assets/js/accordion.js"></script>
     <script src="../prism/prism.js"></script>
     <script src="../assets/js/etc/script.js"></script>

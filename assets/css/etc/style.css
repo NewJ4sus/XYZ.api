@@ -135,20 +135,6 @@
     transform: translateX(-5px);
 }
 
-@media (max-width: 768px) {
-    .aside-left { display: none; }
-
-    .landing-container {
-        min-height: 100vh;
-        padding: 0px;
-    }
-
-    .landing-block{
-        border: none;
-        border-radius: 0;
-    }
-}
-
 :root {
     --background-color: #17181D;
     --card-background: #1E1F24;
@@ -276,4 +262,38 @@ body {
 
 .btn-secondary:hover {
     background-color: #007B9E;
+}
+
+.landing-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-offcanvas-controls{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .aside-left { display: none; }
+
+    .landing-container {
+        min-height: 100vh;
+        padding: 0px;
+    }
+
+    .landing-block{
+        border: none;
+        border-radius: 0;
+    }
+
+    .landing-navigation{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    .button-offcanvas-controls{
+        display: flex;
+    }
 }

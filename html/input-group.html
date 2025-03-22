@@ -203,110 +203,74 @@
     <main class="landing-container">
         <div class="landing-block">
             <div class="container mb-5">
-                <h5 class="mb-5">Input</h5>
+                <h5 class="mb-5">Input group</h5>
                 <div class="grid-auto grid-2 gap-3">
                     <div>
-                        <div class="input-container label-top">
-                            <input id="input-text" type="text" placeholder="text">
-                            <label for="input-text">Login</label>
+                        <!-- Basic input group with button -->
+                        <div class="input-container input-group mb-3">
+                            <input type="text" placeholder="Search...">
+                            <button class="btn btn-primary">Search</button>
                         </div>
-        
-                        <div class="input-container label-top">
-                            <input id="input-email1" type="email" placeholder="email">
-                            <label for="input-email1">Email</label>
+
+                        <!-- Input group with prefix and button -->
+                        <div class="input-container input-group mb-3">
+                            <span class="input-prefix">@</span>
+                            <input type="text" placeholder="Username">
+                            <button class="btn btn-secondary">Verify</button>
                         </div>
-                
-                        <div class="input-container">
-                            <input id="input-text" type="search" placeholder="">
-                            <label for="input-text">search</label>
+
+                        <!-- Input group with multiple buttons -->
+                        <div class="input-container input-group mb-3">
+                            <button class="btn btn-outline">-</button>
+                            <input type="number" value="1" min="1" max="100">
+                            <button class="btn btn-outline">+</button>
                         </div>
-                
-                        <div class="input-container">
-                            <input id="input-password" type="password" placeholder="">
-                            <label for="input-password">password</label>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-email" type="email" placeholder="">
-                            <label for="input-email">email</label>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-number" type="number" placeholder="">
-                            <label for="input-number">number</label>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-number1" type="number" placeholder="" min="1" max="20">
-                            <label for="input-number1">number</label>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-tel" type="tel" placeholder="">
-                            <label for="input-tel">tel</label>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-textarea" type="textarea" placeholder="">
-                            <label for="input-textarea">textarea</label>
+
+                        <!-- Input group with dropdown -->
+                        <div class="input-container input-group mb-3">
+                            <select class="input-select">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                            </select>
+                            <input type="number" placeholder="Amount">
+                            <button class="btn btn-success">Convert</button>
                         </div>
                     </div>
-            
+
                     <div>
-                        <div class="input-container">
-                            <input id="input-range" type="range" placeholder="" min="1" max="100">
+                        <!-- Input group with icon -->
+                        <div class="input-container input-group mb-3">
+                            <span class="input-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <input type="search" placeholder="Search...">
                         </div>
-                
-                        <div class="input-container">
-                            <input id="input-date" type="date" placeholder="">
+
+                        <!-- Input group with prefix and suffix -->
+                        <div class="input-container input-group mb-3">
+                            <span class="input-prefix">https://</span>
+                            <input type="text" placeholder="your-domain">
+                            <span class="input-suffix">.com</span>
                         </div>
-                
-                        <div class="input-container">
-                            <input id="input-color" type="color" placeholder="">
+
+                        <!-- File input group -->
+                        <div class="input-container input-group mb-3">
+                            <input type="file" id="file-upload">
+                            <button class="btn btn-primary">Upload</button>
                         </div>
-                
-                        <div class="input-container">
-                            <input id="input-time" type="time" placeholder="">
-                        </div>
-                
-                        <div class="input-container">
-                            <select id="input-select" placeholder="">
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+
+                        <!-- Complex input group -->
+                        <div class="input-container input-group mb-3">
+                            <span class="input-prefix">$</span>
+                            <input type="number" placeholder="0.00">
+                            <select class="input-select">
+                                <option value="monthly">Monthly</option>
+                                <option value="yearly">Yearly</option>
                             </select>
-                        </div>
-                
-                        <div class="input-container">
-                            <input id="input-file" type="file">
-                        </div>
-                
-                        <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
-                            <input id="input-checkbox0" type="checkbox" name="programming" value="HTML">
-                            <label class="input-select-label" for="input-checkbox0">HTML</label>
-                
-                            <input id="input-checkbox1" type="checkbox" name="programming" value="CSS">
-                            <label class="input-select-label" for="input-checkbox1">CSS</label>
-                
-                            <input id="input-checkbox2" type="checkbox" name="programming" value="JS">
-                            <label class="input-select-label" for="input-checkbox2">JS</label>
-                
-                            <input id="input-checkbox3" type="checkbox" name="programming" value="TS">
-                            <label class="input-select-label" for="input-checkbox3">TS</label>
-                        </div>
-                
-                        <div class="input-container" style="background: var(--bg-secondary-color); padding: 1rem;">
-                            <input id="input-radio0" type="radio" name="programming" value="HTML">
-                            <label class="input-select-label" for="input-radio0">HTML</label>
-                
-                            <input id="input-radio1" type="radio" name="programming" value="CSS">
-                            <label class="input-select-label" for="input-radio1">CSS</label>
-                
-                            <input id="input-radio2" type="radio" name="programming" value="JS">
-                            <label class="input-select-label" for="input-radio2">JS</label>
-                
-                            <input id="input-radio3" type="radio" name="programming" value="TS">
-                            <label class="input-select-label" for="input-radio3">TS</label>
+                            <button class="btn btn-success">Subscribe</button>
                         </div>
                     </div>
                 </div>
